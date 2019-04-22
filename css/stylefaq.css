@@ -2,7 +2,7 @@
 
 @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"); /*para poder usar los iconitos, que se comporta como tipografia*/
 
-@import url("normalize.css");
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
 @import url("navstyle.css");
 
