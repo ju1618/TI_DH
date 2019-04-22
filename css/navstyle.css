@@ -1,0 +1,26 @@
+.main-nav{
+  background-color: rgb(255,0,0);
+  width: 900px;
+  height: 40px;
+  position: relative;
+  left:115px;
+  top:-90px;
+
+}
+.main-nav li{
+  display:inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 10px;
+  margin-right: 5px;
+}
+
+.main-nav ul{
+  /* algo algo */
+}
+.logo{
+  position: relative;
+  top:5px;
+  left:20px;
+  z-index: 30;
+}

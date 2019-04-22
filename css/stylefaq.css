@@ -1,18 +1,21 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'); */
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,700,700i');
 
 @import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"); /*para poder usar los iconitos, que se comporta como tipografia*/
 
-@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("normalize.css");
+
+@import url("navstyle.css");
+
 
 *{
   box-sizing: border-box;
 }
 
 body{
-  /* font-family: "Roboto", sans-serif; /*esto es para que si no carga la tipografia roboto me cargue la sans-serif*/ */
-  /* background-image: url(../images/bg-body.png); */
-}
+  font-family: "Muli", sans-serif; /*esto es para que si no carga la tipografia roboto me cargue la sans-serif*/
+  background-image: url(../images/bg-body.jpg);
 
+}
 ul,
 ol{
   list-style: none;
