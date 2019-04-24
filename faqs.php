@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/navstyle.css">
   </head>
   <body>
-    <?php require_once('nav-bar.php'); ?> 
     <div class="container">
+      <?php require_once('nav-bar.php'); ?> 
       <!-- esto lo saque de la internet -->
       <section class="cd-faq">
        <ul class="cd-faq-categories">

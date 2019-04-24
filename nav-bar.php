@@ -1,12 +1,20 @@
-<?php
-<img class="logo" src="images/logo1.png" alt="logo tu empresa">
-<nav class="main-nav">
+<nav class="main-nav navbar fixed-top navbar-light navbar-expand bg-light">
+  <a class= "navbar-brand" href="#">
+    <!-- /*que vaya al home*/ -->
+  <img class="logo navbar-brand" src="images/logo1.png" alt="logo tu empresa">
+  </a>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Productos</a></li>
-    <li><a href="faqs.html">Preguntas Frequentes</a></li>
-    // info de contacto
+    <li class="nav-item">
+      <a class= "nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class= "nav-link" href="#">Productos</a>
+    </li>
+    <li class="nav-item">
+      <a class= "nav-link" href="faqs.php">Preguntas Frequentes</a>
+    </li>
+    <!-- // info de contacto -->
   </ul>
-    <li><a href="#">Perfil</a></li> /*del lasdo de sign in y log in*/
+    <li><a href="#">Perfil</a></li>
+    <!-- /*del lado de sign in y log in*/ -->
 </nav>
-?>
