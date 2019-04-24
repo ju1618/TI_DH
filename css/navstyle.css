@@ -1,14 +1,10 @@
 .main-nav{
-  background-color: #4bd1b6;
-  width: 100vw;
-  height: 40px;
-  /* position: relative; */
-  left:0px;
-  top:0px;
-  }
-/* ver cmo arreglar el tema delas posiciones con el ejercicio de navbar rojo */
+  position: fixed;
+  width: 100%;
+}
 
 .main-nav li{
+  position: relative;
   display:inline-block;
   font-size: 20px;
   padding-top: 10px;
@@ -17,10 +13,12 @@
 }
 
 .logo{
-  position: relative;
-  top:5px;
-  left:20px;
-  z-index: 30;
+  /* position: relative; */
+  /* top:5px;
+  left:20px; */
+  /* z-index: 30; */
   max-width: 50%;
   max-height: 50%;
 }
+
+/* ver clase 27/03 */
