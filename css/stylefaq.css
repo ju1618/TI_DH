@@ -6,6 +6,11 @@
 
 @import url("navstyle.css");
 
+/* me falta solucionar:
+hacer que todo el li sea un boton (?)
+el tema de los links con los id
+agregar contenido
+*/
 
 *{
   box-sizing: border-box;
@@ -37,7 +42,8 @@ img{
 /*--------hasta acá es el seteo de los estilos de la pagina-------------*/
 
 .container{
-  margin-left: 2%;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 130px;
   overflow:auto;
   clear:both;
@@ -57,7 +63,7 @@ img{
   z-index: 150;
   padding:20px;
   margin-top: 5px;
-  background-color: rgba(207,23,81,0.85);
+  background-color: rgb(207,23,81);
 }
 
 .categorias{
@@ -77,7 +83,18 @@ img{
   text-decoration: none;
   text-align: center;
   align-self: center;
-  background-color: rgba(207,23,81,0.85);
+  background-color: rgb(207,23,81);
+}
+
+.respuesta li{
+  list-style: initial;
+  margin-left: 2%;
+}
+
+.respuesta a {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
 @media screen and (max-width: 700px) {
