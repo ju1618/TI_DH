@@ -12,19 +12,17 @@
   <body>
 
     <?php require_once('nav-bar.php'); ?>
-
-    <div class="container">
-      <nav class="navbar navbar-expand-sm navbar-expand-md navbar-dark faq-temas">
+      <nav class="navbar navbar-expand-sm navbar-expand-md navbar-dark fixed-top faq-temas justify-content-center">
         <button class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
-           <ul class="navbar-nav mr-auto categorias">
+        <div class="collapse navbar-collapse justify-content-center">
+           <ul class="navbar-nav mr-auto categorias nav-pills nav-justified">
             <li class="nav-item">
               <a class="nav-link" href="#sesion">Configuración de cuenta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#publicacion">Publicar</a>
+              <a class="nav-link" href="#publicar">Publicar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#compra">Compra</a>
@@ -32,6 +30,7 @@
          </ul>
         </div>
       </nav>
+    <div class="container">
 
        <div class="cd-faq-items">
          <ul>
@@ -61,7 +60,7 @@
                   <br>
                </li>
 
-            <li class="cd-faq-title cd-faq-group" id="publicacion"><h2>Publicación</h2></li>
+            <li class="cd-faq-title cd-faq-group" id="publicar"><h2>Publicar</h2></li>
             <li>
               <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo publico un producto?</h4></div>
               <div class="cd-faq-content respuesta">
