@@ -25,6 +25,9 @@
   margin-right: 5px;
   color: #fff;
 }
+.main-nav li a{
+  color: #fff;
+}
 
 .logo{
   position: relative;

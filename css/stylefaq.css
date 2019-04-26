@@ -72,9 +72,16 @@ img{
   align-self: center;
 }
 
-.categorias li a{
+.categorias li a{ /*ver como hacer para que todo el link sea boton*/
   color: white;
   text-decoration: none;
   text-align: center;
   align-self: center;
+  background-color: rgba(207,23,81,0.85);
+}
+
+@media screen and (max-width: 700px) {
+  .row, .categorias {
+    flex-direction: column;
+  }
 }
