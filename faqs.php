@@ -4,20 +4,21 @@
     <title>FAQ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylefaq.css">
     <link rel="stylesheet" href="css/navstyle.css">
+
   </head>
   <body>
-    <?php require_once('nav-bar.php'); ?> 
+    <?php require_once('nav-bar.php'); ?>
     <div class="container">
-        <!-- esto lo saque de la internet -->
-      <section class="cd-faq">
-       <ul class="cd-faq-categories">
-          <li><a href="#sesion">Configuración de cuenta</a></li>
-          <li><a href="#venta">Venta</a></li>
-          <li><a href="#compra">Compra</a></li>
-          <li><!-- ... --></li>
+      <section class="cd-faq faq-temas navbar-nav-scroll ">
+       <ul class="cd-faq-categories categorias navbar-nav bd-navbar-nav">
+          <li class="nav-item"><a href="#sesion">Configuración de cuenta</a></li>
+          <li class="nav-item"><a href="#venta">Venta</a></li>
+          <li class="nav-item"><a href="#compra">Compra</a></li>
        </ul>
+      </section>
 
        <div class="cd-faq-items">
           <ul id="sesion" class="cd-faq-group">
@@ -69,7 +70,6 @@
 
           <!-- ... -->
        </div>
-    </section>
 <!-- esto lo saque de la internet -->
     </div>
   </body>

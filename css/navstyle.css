@@ -1,6 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500');
+
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"); /*para poder usar los iconitos, que se comporta como tipografia*/
+
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+
 .main-nav{
-  position: fixed;
-  width: 100%;
+  position:fixed;
+  width:100%;
+  height:60px;
+  left: 0;
+  top: 0;
+  clear:both;
+  z-index: 200;
+  padding:10px;
+  display: inline-flex;
 }
 
 .main-nav li{
@@ -13,12 +27,11 @@
 }
 
 .logo{
-  /* position: relative; */
+  position: relative;
   /* top:5px;
   left:20px; */
   /* z-index: 30; */
   max-width: 50%;
   max-height: 50%;
+  clear:both;
 }
-
-/* ver clase 27/03 */
