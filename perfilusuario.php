@@ -14,24 +14,42 @@
       <?php require_once('nav-bar.php'); ?>
     <div class="container">
       <div class="contenedor1">
-        <img width="100" src="images/imagen.png" alt="foto del usuario">
+        <center><img class="fotousuario" src="images/imagen.png" alt="foto del usuario"></center>
+         <br>
+         <br>
         <h1>Mi cuenta</h1>
-        <h2>Hola, usuario!</h2>
+        <h2>Hola, Tomás!!!</h2>
         <br>
         <br>
-        <ul>
-          <li>Mis Datos</li>
+          <a href="#MisDatos">Mis Datos</a>
           <br>
-          <li>Compras</li>
           <br>
-          <li>Facturación</li>
-        </ul>
+          <a href="#compras">Compras</a>
+          <br>
+          <br>
+          <a href="#facturas">Facturación</a>
+          <br>
       </div>
       <div class="contenedor2">
-        <ul>
-          <li>Mis datos</li>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,</p>
-        </ul>
+          <h2 id = "MisDatos"><em><strong>Mis datos</strong></em></li></h2>
+          <br>
+          <p><strong>Nombre y Apellido:</strong> Tomás Gomez</p>
+          <br>
+          <p><strong>Dirección:</strong> Av. Rivadavia 4000</p>
+          <br>
+          <p><strong>Ciudad:</strong> Capital Federal</p>
+          <br>
+          <p><strong>Provincia:</strong> Buenos Aires</p>
+          <br>
+      </div>
+      <div class="contenedor3">
+        <h2 id="compras"><em><strong>Compras</strong></em></li></h2>
+        <img class="productocomprado" src="images/mate-de-madera-colorido.jpg" alt="producto comprado">
+        <p>Mate de madera colorido</p>
+        <p>Cantidad: 2</p>
+        <p>Precio: $250</p>
+        <p>Total: 2 x $250 = $500</p>
+        <br>
       </div>
    </div>
    <?php require_once('footer.php'); ?>

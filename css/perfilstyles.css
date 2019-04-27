@@ -43,29 +43,50 @@ img{
 /*--------hasta acá es el seteo de los estilos de la pagina-------------*/
 
 
-.images {
- position: center;
+.fotousuario {
+ width: 80px;
+}
+
+.productocomprado {
+  width: 80px;
 }
 
 .container {
-  width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
+    position: relative;
+    width: 1300px;
     margin-top: 130px;
     overflow: auto;
 }
 
 .contenedor1 {
-  width: 400px;
+  width: 300px;
   border: black;
   background-color: #4bd1b6;
   float: left;
   clear: both;
+  padding: 20px;
+  margin: 20px;
+  height: 1000px;
+  border: 2px solid black;
 }
 
 .contenedor2 {
-  width: 800px;
+  width: 600px;
   border: black;
   background-color: rgba(75,145,214,0.11);
   float: right;
+  padding: 20px;
+  margin: 20px;
+  height: 600px;
+  border: 2px solid black;
+}
+
+.contenedor3 {
+  width: 600px;
+  float: right;
+  background-color: beige;
+  padding: 20px;
+  margin: 20px;
+  height: 400px;
+  border: 2px solid black;
 }
