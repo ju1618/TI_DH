@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500');
+
+@import url("http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: rgba(75,145,214,0.11);
+  background-size: cover;
+}
+
+.img {
+
+}
+
+.container {
+  width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 130px;
+    overflow: auto;
+}
+
+.contenedor1 {
+  width: 400px;
+  border: black;
+  background-color: rgba(75,145,214,0.11);
+  float: left;
+  clear: both;
+}
+
+.contenedor2 {
+  width: 800px;
+  border: black;
+  background-color: beige;
+  float: right;
+}
