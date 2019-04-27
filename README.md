@@ -20,5 +20,3 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 * **Fernández, Julia** - *Initial work* - (https://github.com/ju1618)
 
 * **Verón, Marcos** - *Initial work* - (https://github.com/mveron007)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
