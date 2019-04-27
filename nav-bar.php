@@ -18,9 +18,6 @@
       <!-- <li class="nav-item active">
         <a class= "nav-link" href="#">Productos</a>
       </li> -->
-      <li class="nav-item active">
-        <a class= "nav-link" href="faqs.php">FAQ</a>
-      </li>
       <!-- <li class="nav-item">
         <a class= "nav-link" href="#">Registrarse</a>
       </li> -->
@@ -29,6 +26,9 @@
       </li>
       <li class="nav-item">
         <a class= "nav-link" href="perfilusuario.php">Perfil</a>
+      </li>
+      <li class="nav-item active">
+        <a class= "nav-link" href="faqs.php">FAQ</a>
       </li>
     </ul>
   </div>

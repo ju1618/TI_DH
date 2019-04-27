@@ -12,7 +12,7 @@
   <body>
 
     <?php require_once('nav-bar.php'); ?>
-    
+
       <nav class="navbar navbar-expand-sm navbar-expand-md navbar-dark fixed-top faq-temas justify-content-center">
         <button class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
