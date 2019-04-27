@@ -57,9 +57,9 @@ img{
   justify-content: space-around;
   position:fixed;
   width:100%;
-  height:auto;;
+  height:auto;
   left: 0;
-  top: 90px;
+  top: 95px;
   clear:both;
   z-index: 150;
   padding:0;
