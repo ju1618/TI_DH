@@ -20,18 +20,21 @@
               <!-- Wrapper for slides -->
               <div class="carousel-inner carrousel">
                 <div class="item active">
-                  <img src="img/fondo7.jpg" alt="">
+                  <img src="images/fondo7.jpg" alt="">
                 </div>
                 <div class="item">
-                  <img src="img/fondo10.jpg" alt="">
+                  <img src="images/fondo10.jpg" alt="">
                 </div>
                 <div class="item">
-                  <img src="img/fondo.jpg" alt="">
+                  <img src="images/fondo.jpg" alt="">
                 </div>
               </div>
             </div>
         </div>
           <div class="col-sm-12 col-md-6 col2">
+
+
+          <div class="row">
 
               <div class="container login-container">
                 <div class="col-md-12 login-form-1">
@@ -53,7 +56,20 @@
 
               </div>
             </div>
+          </div>
 
+          <div class="row redes">
+            <!-- redes sociales section -->
+            <ul class="list-inline lista-redes">
+              <li><img  width="30px" height="30px" src="images/facebook.png" alt="logo facebook"></li>
+              <li><img width="30px" height="30px" src="images/instagram.png" alt="logo instagram"></li>
+              <li><img width="30px" height="30px" src="images/twiter.png" alt="logo twitter"></li>
+            </ul>
+          </div>
+
+          <div class="row footer">
+            Aca va a ir el footer!
+          </div>
             </div>
           </div>
           </div>
