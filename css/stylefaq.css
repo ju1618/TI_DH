@@ -6,12 +6,6 @@
 
 @import url("navstyle.css");
 
-/* me falta solucionar:
-hacer que todo el li sea un boton (?)
-el tema de los links con los id
-agregar contenido
-*/
-
 *{
   box-sizing: border-box;
 }
@@ -45,10 +39,10 @@ img{
 .container{
   margin-right: auto;
   margin-left: auto;
-  margin-top: 155px;
+  margin-top: 185px;
   overflow:auto;
   clear:both;
-  display: inline-flex;
+  /* display: inline-flex; */
 }
 
 .faq-temas{
@@ -59,7 +53,7 @@ img{
   width:100%;
   height:auto;
   left: 0;
-  top: 95px;
+  top: 110px;
   clear:both;
   z-index: 150;
   padding:0;
