@@ -36,10 +36,12 @@ no forzar el margin para que el contenido no se meta atras del navbar
 
 .logo{
   position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
   /* top:5px;
   left:20px; */
   /* z-index: 30; */
-  max-width: 40%;
-  max-height: 40%;
+  max-width: 8%;
+  max-height: 8%;
   clear:both;
 }
