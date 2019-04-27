@@ -4,18 +4,47 @@
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
+@import url("navstyle.css");
+
+/* me falta solucionar:
+hacer que todo el li sea un boton (?)
+el tema de los links con los id
+agregar contenido
+*/
+
 *{
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Fira Sans", sans-serif;
+body{
+  font-family: "Fira Sans", sans-serif; /*esto es para que si no carga la tipografia roboto me cargue la sans-serif*/
   background-color: rgba(75,145,214,0.11);
-  background-size: cover;
+  /* background-image: url(../images/colorclaro.jpg); */
+  background-size:cover;
+
+}
+ul,
+ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.img {
+a{
+  text-decoration: none;
+  color: inherit; /*esto significa que esta hereddando el color de su padre*/
+  display: inline-block; /*para que tome los margenes y no ocupe todo el ancho, esto lo uso por default*/
+}
 
+img{
+  width: 100%;/*para que tenga el ancho de us contenedor*/
+}
+
+/*--------hasta acá es el seteo de los estilos de la pagina-------------*/
+
+
+.images {
+ position: center;
 }
 
 .container {
@@ -29,7 +58,7 @@ body {
 .contenedor1 {
   width: 400px;
   border: black;
-  background-color: rgba(75,145,214,0.11);
+  background-color: #4bd1b6;
   float: left;
   clear: both;
 }
@@ -37,6 +66,6 @@ body {
 .contenedor2 {
   width: 800px;
   border: black;
-  background-color: beige;
+  background-color: rgba(75,145,214,0.11);
   float: right;
 }

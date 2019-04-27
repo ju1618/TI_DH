@@ -5,14 +5,16 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>Mi perfil</title>
     <!--Vinculción externa de CSS-->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/perfilstyles.css">
+<link rel="stylesheet" href="css/navstyle.css">
     <!--Bootstrap CDN-->
-<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
+      <?php require_once('nav-bar.php'); ?>
     <div class="container">
       <div class="contenedor1">
-        <img width="100" src="img/imagen.png" alt="foto del usuario">
+        <img width="100" src="images/imagen.png" alt="foto del usuario">
         <h1>Mi cuenta</h1>
         <h2>Hola, usuario!</h2>
         <br>
@@ -32,5 +34,6 @@
         </ul>
       </div>
    </div>
+   <?php require_once('footer.php'); ?>
   </body>
 </html>
