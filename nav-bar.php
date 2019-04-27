@@ -13,11 +13,11 @@
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class= "nav-link" href="#">Home </a>
+        <a class= "nav-link" href="index-proyecto.php">Home </a>
       </li>
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class= "nav-link" href="#">Productos</a>
-      </li>
+      </li> -->
       <li class="nav-item active">
         <a class= "nav-link" href="faqs.php">FAQ</a>
       </li>
@@ -28,7 +28,7 @@
         <a class= "nav-link" href="#">Ingresar</a>
       </li>
       <li class="nav-item">
-        <a class= "nav-link" href="#">Perfil</a>
+        <a class= "nav-link" href="perfilusuario.php">Perfil</a>
       </li>
       <!-- // info de contacto -->
     </ul>
