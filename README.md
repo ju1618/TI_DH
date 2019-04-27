@@ -8,7 +8,7 @@ El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los 
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Por favor, leer esto [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) para ver detalles del codigo de conducta, y el proceso para pedir pullear.
 
 
 ## Authors
