@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
+    <!-- Etiqueta meta -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- LLamda a font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Llamada a bootstrap y relacionados -->
@@ -73,11 +75,10 @@
                           </div>
                       </div>
                 </div>
-                <!-- <div class="row"> -->
-
-                <!-- </div> -->
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 mi-footer">
+                </div>
+                <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
+        </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
                 <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-home"></i></a></li>
                 <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-user-alt"></i></a></li>
@@ -85,6 +86,7 @@
                 <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
             </ul>
           </div>
-      </div>
+      <!-- </div> -->
+
   </body>
 </html>
