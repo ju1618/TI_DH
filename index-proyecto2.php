@@ -53,7 +53,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-12 col-md-2 col-lg-4">
-          <img src="TI_DH/images/molde-frog.jpg" alt="molde-frog">
+          <img src="images/molde-frog.jpg" alt="molde-frog">
           <h2>Molde de rana</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -61,7 +61,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/cucharon-dino.jpg" alt="cucharon">
+          <img src="images/cucharon-dino.jpg" alt="cucharon">
           <h2>Cucharon de dinosaurio</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -70,7 +70,7 @@
 
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/rociador-limon.jpg" alt="rociador">
+          <img src="images/rociador-limon.jpg" alt="rociador">
           <h2>Rociador de limón</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/esparcidor-unicornio.jpg" alt="unicornio">
+          <img src="images/esparcidor-unicornio.jpg" alt="unicornio">
           <h2>Esparcidor de confites</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -86,7 +86,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/molde-huevo.jpg" alt="molde">
+          <img src="images/molde-huevo.jpg" alt="molde">
           <h2>Molde de corazón</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -100,7 +100,7 @@
 
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/mesa-pizarra.jpg" alt="mesa-pizarra">
+          <img src="images/mesa-pizarra.jpg" alt="mesa-pizarra">
           <h2>Mesa pizarra</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -108,7 +108,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-12 col-md-2 col-lg-4">
-          <img src="TI_DH/images/anotador-head.jpg" alt="anotador-head">
+          <img src="images/anotador-head.jpg" alt="anotador-head">
           <h2>Anotador de cabeza</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -116,7 +116,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/basket-cesto.jpg" alt="basket-cesto">
+          <img src="images/basket-cesto.jpg" alt="basket-cesto">
           <h2>Cesto Basket-Office</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -125,7 +125,7 @@
 
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/cup-holder.jpg" alt="cup-holder">
+          <img src="images/cup-holder.jpg" alt="cup-holder">
           <h2>Sostén de taza</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -133,7 +133,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/apoya-pies.jpg" alt="apoya-pies">
+          <img src="images/apoya-pies.jpg" alt="apoya-pies">
           <h2>Apoya pies de escritorio</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
@@ -141,7 +141,7 @@
         </div>
         <div class="row" id="content-product">
           <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="TI_DH/images/aire-usb.jpg" alt="aire-usb">
+          <img src="images/aire-usb.jpg" alt="aire-usb">
           <h2>Aire frio/calor USB</h2>
           <a href="#"><span>Detalles</span></a>
           </div>
