@@ -24,9 +24,18 @@
         </div>
         <div class="carousel-item">
           <img src="TI_DH/images/office-2.jpg" class="d-block w-100" alt="Second Slide">
+          <div class="carousel-caption d-none d-md-block">
+          <a href="#oficina"> <h1 style="color:white;">Accesorios para tu oficina</h1></a>
+          <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+          </div>
         </div>
         <div class="carousel-item">
           <img src="TI_DH/images/cook.jpg" class="d-block w-100" alt="Third Slide">
+          <div class="carousel-caption d-none d-md-block">
+          <a href="#cocina"> <h1 style="color:white;">Los mejores gadgets para cocinar</h1></a>
+          <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+          </div>
+
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
