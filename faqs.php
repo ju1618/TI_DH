@@ -11,7 +11,7 @@
   <body>
 
     <?php require_once('nav-bar.php'); ?>
-
+    <!-- Inicio de nav interno de FAQ--->
       <nav class="navbar navbar-dark fixed-top faq-temas justify-content-center">
         <div class="justify-content-center">
            <ul class="navbar-nav mr-auto categorias nav-pills nav-justified">
@@ -27,6 +27,8 @@
          </ul>
         </div>
       </nav>
+      <!-- FIN de nav interno FAQ -->
+      
     <div class="container">
 
        <div class="cd-faq-items">

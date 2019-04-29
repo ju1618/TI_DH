@@ -4,8 +4,6 @@
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 /* falta solucionar:
-responsive (el tema cuando esta en mobile y xq no se me expande el menu, ver clase ????)
-logo
 no forzar el margin para que el contenido no se meta atras del navbar
 */
 
@@ -18,7 +16,7 @@ no forzar el margin para que el contenido no se meta atras del navbar
   clear:both;
   z-index: 200;
   padding:10px;
-  /* display: inline-flex; */
+  display: inline-flex;
   background-color: #4bd1b6;
 }
 
@@ -35,14 +33,13 @@ no forzar el margin para que el contenido no se meta atras del navbar
 }
 
 .logo{
-  position: relative;
-  display: inline-flex;
-  flex-wrap: wrap;
   max-height: 80px;
   width: auto;
   clear:both;
+  display: block; /*esto es para poder aplicarle el margin auto, es solo para elementos de bloque*/
+  margin:auto;
 }
-/* 
+/*
 ul.main-nav {
   list-style-type: none;
   margin: 0;

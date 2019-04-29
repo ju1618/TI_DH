@@ -36,14 +36,7 @@ img{
 
 /*--------hasta acá es el seteo de los estilos de la pagina-------------*/
 
-.container{
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 185px;
-  overflow:auto;
-  clear:both;
-  /* display: inline-flex; */
-}
+/* <----inicio nav interno---> */
 
 .faq-temas{
   display: inline-flex;
@@ -64,9 +57,17 @@ img{
 .faq-temas li a:hover {
   background-color: rgb(207,23,81);
 }
+/* <----fin nav interno---> */
 
-
-
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  overflow:auto;
+  clear:both;
+  margin-top: 160px;
+  /* display: inline-flex; */
+}
 .categorias{
   display: flex;
   flex-flow: row wrap;
@@ -81,6 +82,7 @@ img{
 
 .categorias li a{ /*ver como hacer para que todo el link sea boton*/
   color: white;
+  display: inline-block;
   text-decoration: none;
   text-align: center;
   align-self: center;
@@ -98,8 +100,16 @@ img{
   display: inline-block;
 }
 
+
 @media screen and (max-width: 700px) {
   .row, .categorias {
     flex-direction: column;
+  }
+  ul.faqnav li.right,
+  ul.faqnav li {
+      float: none;
+  }
+  .container{
+    margin-top: 230px;
   }
 }
