@@ -113,3 +113,10 @@ img{
     width: 100%;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .contenedor1, .contenedor2, .contenedor3, .contenedor4 {
+    width: 100%;
+    clear: both;
+  }
+}
