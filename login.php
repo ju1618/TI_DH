@@ -37,8 +37,8 @@
                             <!-- Como si fuera el 'header' del formulario -->
                             <div class="mi-cabecera-form">
                                   <div class="mi-contenido-izquierdo">
-                                        <h3>Encontra eso que buscas</h3>
-                                        <p>Ingresa aqui tus credenciales</p>
+                                        <h3>Ingresa aqui tus credenciales</h3>
+                                        <a href="#">No estas registrado? </a><a href="#">  Olvidaste tu password?</a>
                                   </div>
                                   <div class="mi-contenido-derecho">
                                         <i class="far fa-user-circle"></i>
