@@ -63,7 +63,7 @@ img{
   clear: both;
   padding: 20px;
   margin: 10px;
-  height: 1400px;
+  height: 1500px;
   border: 2px solid black;
   text-align: center;
   overflow: hidden;
@@ -79,6 +79,10 @@ img{
   height: 350px;
   border: 2px solid black;
   overflow: hidden;
+}
+
+.item {
+  font-size: 24px;
 }
 
 .contenedor3 {
@@ -108,6 +112,17 @@ img{
   height: auto;
 }
 
+.contenedor5 {
+  width: 60%;
+  float: right;
+  background-color: rgba(59,20,173,0.11);
+  padding: 30px;
+  margin: 10px;
+  height: 240px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 400px) {
   .contenedorprincipal {
     width: 100%;
@@ -115,7 +130,7 @@ img{
 }
 
 @media screen and (max-width: 800px) {
-  .contenedor1, .contenedor2, .contenedor3, .contenedor4 {
+  .contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
     width: 100%;
     clear: both;
   }

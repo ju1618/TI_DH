@@ -18,21 +18,21 @@
           <center><img class="fotousuario" src="images/imagen.png" alt="foto del usuario"></center>
           <br>
           <br>
-                <h1><center>Mi cuenta</center></h1>
+                <h1><center>Mi Perfil</center></h1>
                 <br>
             <h2>Hola, Tomás!!!</h2>
           <br>
           <br>
-          <a href="#MisDatos">Mis Datos</a>
+          <a class="item" href="#MisDatos">Mis Datos</a>
           <br>
           <br>
-          <a href="#compras">Compras</a>
+          <a class="item" href="#compras">Compras</a>
           <br>
           <br>
-          <a href="#facturas">Facturación</a>
+          <a class="item" href="#facturas">Facturación</a>
           <br>
           <br>
-          <a href="#cambiopass">Cambiar Contraseña</a>
+          <a class="item" href="#cambiopass">Contraseña</a>
       </div>
       <div class="contenedor2">
           <br>
@@ -48,20 +48,29 @@
           <br>
       </div>
       <div class="contenedor3">
-        <br>
-        <h2 id="compras"><em><strong><center>Compras</center></strong></em></li></h2>
-        <br>
-        <center><img class="productocomprado" src="images/mate-de-madera-colorido.jpg" alt="producto comprado"></center>
-        <p>Mate de madera colorido</p>
-        <p>Cantidad: 2</p>
-        <p>Precio: $250</p>
-        <p>Total: 2 x $250 = $500</p>
-        <br>
+         <br>
+         <h2 id="compras"><em><strong><center>Compras</center></strong></em></li></h2>
+         <br>
+         <center><img class="productocomprado" src="images/mate-de-madera-colorido.jpg" alt="producto comprado"></center>
+         <p>Mate de madera colorido</p>
+         <p>Cantidad: 2</p>
+         <p>Precio: $250</p>
+         <p>Total: 2 x $250 = $500</p>
+         <br>
       </div>
       <div class="contenedor4">
-        <br>
-        <h2 id="facturas"><em><strong><center>Facturación</center></strong></em></li></h2>
-        <img class="facturadecompra" src="images/facturamp.png" alt="factura de compra">
+         <br>
+         <h2 id="facturas"><em><strong><center>Facturación</center></strong></em></li></h2>
+         <img class="facturadecompra" src="images/facturamp.png" alt="factura de compra">
+      </div>
+      <div class="contenedor5">
+         <br>
+         <h2 id="cambiopass"><em><strong><center>Contraseña</center></strong></em></h2>
+         <br>
+         <a href="#reset">Reestablecer contraseña</a>
+         <br>
+         <br>
+         <a href="#cambiarpass">Cambiar contraseña</a>
       </div>
    </div>
    <?php require_once('footer.php'); ?>
