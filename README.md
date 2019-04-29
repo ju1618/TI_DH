@@ -6,9 +6,12 @@ Repo del trabajo integrador.
 El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los productos que quiere vender.
 
 
-## Contributing
+## Hojas de estilo
 
-Por favor, leer esto [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) para ver detalles del codigo de conducta, y el proceso para pedir pullear.
+Se utilizó como base las clases de bootstrap,combinado con las hijas de estilo propias.
+[Bootstrap](https://getbootstrap.com/) 
+
+
 
 
 ## Authors
