@@ -1,6 +1,3 @@
-<!-- ver navbar de la pag de bootstrap  https://getbootstrap.com/docs/4.3/getting-started/introduction/-->
-
-
  <!--                              navbar                       -->
 
 <nav class="main-nav navbar fixed-top navbar-light navbar-expand-sm">
@@ -13,7 +10,7 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class= "nav-link" href="index-proyecto2.php">Home </a>
+        <a class= "nav-link" href="index-proyecto.php">Home </a>
       </li>
       <!-- <li class="nav-item active">
         <a class= "nav-link" href="#">Productos</a>
@@ -22,13 +19,13 @@
         <a class= "nav-link" href="#">Registrarse</a>
       </li> -->
       <li class="nav-item" >
-        <a class= "nav-link" href="TI_DH/login.php">Ingresar</a>
+        <a class= "nav-link" href="login.php">Ingresar</a>
       </li>
       <li class="nav-item">
-        <a class= "nav-link" href="TI_DH/perfilusuario.php">Perfil</a>
+        <a class= "nav-link" href="perfilusuario.php">Perfil</a>
       </li>
       <li class="nav-item active">
-        <a class= "nav-link" href="TI_DH/faqs.php">FAQ</a>
+        <a class= "nav-link" href="faqs.php">FAQ</a>
       </li>
     </ul>
   </div>
