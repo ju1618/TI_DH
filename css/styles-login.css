@@ -31,10 +31,9 @@ h6 {
   font-weight: 300;
 }
 
-/*Contenidos y formularios*/
 .container {
   /*border: 3px solid black;*/
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .mi-contenedor {
@@ -140,4 +139,20 @@ textarea:focus,
 textarea.form-control:focus {
   background: #fff;
   border: 2px solid #1AAE88;
+}
+
+.mi-footer{
+  background: #42CFA0;
+  /*border: 3px solid black;*/
+  width: 4%;
+  height: 200px;
+  position: fixed;
+  top: 10%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.list-inline li {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -73,9 +73,17 @@
                           </div>
                       </div>
                 </div>
-                <div class="row">
-                  <p>Aca va a ir el foooooter</p>
-                </div>
+                <!-- <div class="row"> -->
+
+                <!-- </div> -->
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 mi-footer">
+            <ul class="nav navbar-nav list-inline">
+                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-home"></i></a></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-user-alt"></i></a></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
+            </ul>
           </div>
       </div>
   </body>
