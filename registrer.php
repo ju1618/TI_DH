@@ -14,7 +14,7 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
-    <link rel="stylesheet" href="css/styles-register.css">
+    <link rel="stylesheet" href="css/styles-registro.css">
   </head>
   <body>
       <div class="mi-contenedor">
@@ -89,6 +89,7 @@
                 <!-- <li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li> -->
                 <li class="list-inline-item"><a class="" target="_blank" href="faqs.php"><i class="fas fa-question"></i></li>
                 <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
+		<li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
             </ul>
           </div>
       </div>
