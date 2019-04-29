@@ -6,10 +6,11 @@ body {
   color: #fff;
   text-align: center;
   /*background-color: #4bd1b6;*/
-  background-image: url("../images/aa.jpg");
+  background-image: url("../images/mi-fondo-login.jpg");
   background-size: cover;
   background-color: gray;
   overflow: auto;
+  /*gg, vvv, vvvvv*/
 }
 
 strong {
@@ -26,7 +27,15 @@ h1, h2 {
   font-size: 38px;
   font-weight: 100;
   line-height: 50px;
-  color: #4bd1b6;
+  color: #82E0AA;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  line-height: 50px;
+  color: black;
 }
 
 h6 {
@@ -79,6 +88,12 @@ h6 {
   text-align: left;
 }
 
+.mi-contenido-izquierdo a {
+  /*margin-left: 5px;*/
+  margin-right: 5px;
+  color: white;
+}
+
 
 .mi-contenido-izquierdo p {
   opacity: 0.8;
@@ -114,7 +129,7 @@ h6 {
 }
 
 .mi-boton-redsocial {
-  color: #599CCA;
+  color: white;
 }
 
 .mi-boton-redsocial  i {
@@ -122,8 +137,8 @@ h6 {
 }
 
 .mi-boton-redsocial:hover {
-  color: #42CFA0;
-  font-size: 20px;
+  color: #7D3C98;
+  font-size: 15px;
 }
 
 .mis-redes-sociales p {
@@ -154,7 +169,7 @@ textarea.form-control:focus {
 .mi-sidebar{
   background: #42CFA0;
   /*border: 3px solid black;*/
-  width: 4%;
+  width: 40px;
   height: 200px;
   position: fixed;
   top: 30%;
@@ -165,8 +180,14 @@ textarea.form-control:focus {
 .list-inline li {
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 100%;
+  overflow: hidden;
 }
 
+
+.list-inline li a i {
+
+}
 
 .mi-footer {
     background: black;
@@ -176,6 +197,7 @@ textarea.form-control:focus {
 
 .list-inline i:hover {
   color: black;
+  font-size: 15px;
 }
 
 .mi-texto-footer {

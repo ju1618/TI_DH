@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Registrate!</title>
     <!-- LLamda a font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Llamada a bootstrap y relacionados -->
@@ -34,7 +34,7 @@
                             <div class="mi-cabecera-form">
                                   <div class="mi-contenido-izquierdo">
                                         <h3>Encontra eso que buscas</h3>
-                                        <p>Ingresa aqui tus credenciales</p>
+                                        <p>Crea tu cuenta aqui!</p>
                                   </div>
                                   <div class="mi-contenido-derecho">
                                         <i class="far fa-user-circle"></i>
@@ -80,7 +80,16 @@
                           </div>
                       </div>
                 </div>
+               </div>
+		<footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
           </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
+            <ul class="nav navbar-nav list-inline">
+                <li class="list-inline-item"><a class="" target="_blank" href="index-proyecto.php"><i class="fas fa-home"></i></a></li>
+                <!-- <li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li> -->
+                <li class="list-inline-item"><a class="" target="_blank" href="faqs.php"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
+            </ul>
           </div>
       </div>
   </body>

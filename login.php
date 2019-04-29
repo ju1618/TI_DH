@@ -24,7 +24,7 @@
       <div class="mi-contenedor">
           <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
                         <h1 class="mi-marca"><img src="images/logo.png" height="45px" width="55px" alt="logo"><strong>  market palace</strong></h1>
                         <div class="mis-descripciones">
                           <p>Un lugar donde encontrás todo lo que querés</p>
@@ -37,7 +37,7 @@
                             <!-- Como si fuera el 'header' del formulario -->
                             <div class="mi-cabecera-form">
                                   <div class="mi-contenido-izquierdo">
-                                        <h3>Ingresa aqui tus credenciales</h3>
+                                        <h3> Ingresa aqui tus credenciales</h3>
                                         <a href="#">No estas registrado? </a><a href="#">  Olvidaste tu password?</a>
                                   </div>
                                   <div class="mi-contenido-derecho">
@@ -60,7 +60,7 @@
                       </div>
                 </div>
                 <div class="row">
-                      <div class="col-xs-12 col-sm-12 col-md-12 mis-redes-sociales">
+                      <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 mis-redes-sociales">
                           <p>También estamos en las redes!</p>
                           <div class="mis-botones-redes">
                             <a class="mi-boton-redsocial" href="#">
@@ -80,9 +80,9 @@
         </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
-                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-home"></i></a></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-user-alt"></i></a></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="index-proyecto.php"><i class="fas fa-home"></i></a></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
+                <li class="list-inline-item"><a class="" target="_blank" href="faqs.php"><i class="fas fa-question"></i></li>
                 <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
             </ul>
           </div>
