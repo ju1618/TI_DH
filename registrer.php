@@ -14,16 +14,14 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
-    <link rel="stylesheet" href="css/styles-login2.css">
-    <!-- Y normalizo -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" href="css/styles-register.css">
   </head>
   <body>
       <div class="mi-contenedor">
           <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h1 class="mi-marca"><img src="images/logo.png" height="45px" width="55px" alt="logo"><strong>  market palace</strong></h1>
+                        <h1><img src="images/logo.png" height="45px" width="55px" alt="logo"><strong>  market palace</strong></h1>
                         <div class="mis-descripciones">
                           <p>Un lugar donde encontrás todo lo que querés</p>
                         </div>
@@ -52,6 +50,15 @@
                                       <div class="form-group">
                                             <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control" id="password-form">
                                       </div>
+                                      <div class="form-group">
+                                            <input type="text" name="name" value="" placeholder="Ingresa tu nombre..." class="form-control" id="name-form">
+                                      </div>
+                                      <div class="form-group">
+                                            <input type="text" name="lastname" value="" placeholder="Ingresa tu apellido..." class="form-control" id="lastname-form">
+                                      </div>
+                                      <div class="form-group">
+                                            <input type="email" name="email" value="" placeholder="Ingresa tu email..." class="form-control" id="email-form">
+                                      </div>
                                       <button type="submit" name="button" class=" btn btn-primary mi-boton">Ingresar</button>
                                   </form>
                             </div>
@@ -73,6 +80,7 @@
                           </div>
                       </div>
                 </div>
+          </div>
           </div>
       </div>
   </body>
