@@ -14,7 +14,7 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
-    <link rel="stylesheet" href="css/styles-login2.css">
+    <link rel="stylesheet" href="css/styles-login.css">
     <!-- Y normalizo -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
   </head>
@@ -72,6 +72,9 @@
                             </a>
                           </div>
                       </div>
+                </div>
+                <div class="row">
+                  <p>Aca va a ir el foooooter</p>
                 </div>
           </div>
       </div>
