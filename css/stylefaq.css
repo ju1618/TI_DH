@@ -38,9 +38,7 @@ img{
 /*--------hasta acá es el seteo de los estilos de la pagina-------------*/
 
 /* <----inicio nav interno---> */
-.cuerpo{
-  margin-top: 160px;
-}
+
 .faq-temas{
   display: inline-flex;
   flex-wrap: wrap;
@@ -61,13 +59,15 @@ img{
   background-color: rgb(207,23,81);
 }
 /* <----fin nav interno---> */
-
+.cuerpo{
+  padding-top: 160px;
+}
 .container{
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
-  overflow:auto;
-  clear:both;
+  /* overflow:auto;
+  clear:both; */
   /* margin-top: 160px; */
   /* display: inline-flex; */
 }
