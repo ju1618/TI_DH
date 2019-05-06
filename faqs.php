@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/navstyle.css">
     <link rel="stylesheet" href="css/stylefaq.css">
   </head>
-  <body>
+  <body class="cuerpo">
 
     <?php require_once('nav-bar.php'); ?>
     <!-- Inicio de nav interno de FAQ--->

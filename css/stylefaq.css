@@ -16,6 +16,7 @@ body{
   /* background-image: url(../images/colorclaro.jpg); */
   background-size:cover;
 
+
 }
 ul,
 ol{
@@ -58,14 +59,16 @@ img{
   background-color: rgb(207,23,81);
 }
 /* <----fin nav interno---> */
-
+.cuerpo{
+  padding-top: 160px;
+}
 .container{
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
-  overflow:auto;
-  clear:both;
-  margin-top: 160px;
+  /* overflow:auto;
+  clear:both; */
+  /* margin-top: 160px; */
   /* display: inline-flex; */
 }
 .categorias{
