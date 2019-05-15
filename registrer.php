@@ -1,8 +1,78 @@
+<?php
+
+// Incluimos el controlador del registro-login
+	require_once 'register-login-controller.php';
+
+	// Si está logueda la persona la redirijo al profile
+	if ( isLogged() ) {
+		header('location: perfilusuario.php');
+		exit;
+	}
+
+//Paises del select
+$countries = [
+		'ar' => 'Argentina',
+		'bo' => 'Bolivia',
+		'br' => 'Brasil',
+		'co' => 'Colombia',
+		'cl' => 'Chile',
+		'ec' => 'Ecuador',
+		'pa' => 'Paraguay',
+		'pe' => 'Perú',
+		'uy' => 'Uruguay',
+		've' => 'Venezuela',
+	];
+
+// Si entra por GET va a dar error, entonces creo la variable
+$errorsInRegister = [];
+// Voy a persitir lo siguiente
+$username = '';
+$name = '';
+$lastname = '';
+$email = '';
+$countryFromPost = '';
+
+//Si es post se seteó?
+if ($_POST) {
+      // Variables de persistencia , que reciben lo que viene de post
+      $username = trim($_POST['username']);
+      $name = trim($_POST['name']);
+      $lastname = trim($_POST['lastname']);
+      $email = trim($_POST['email']);
+      $countryFromPost = $_POST['country'];
+
+      // funcion que nos retorna los errores que se hayan presentado
+      $errorsInRegister = registerValidate();
+
+      // Si no hay errores en el registro entonces guardo la imagen y los datos
+      if ( !$errorsInRegister ) {
+
+      			// // Guardo la imagen y obtengo el nombre aleatorio creado
+      			$imgName = saveImage();
+            //
+      			// // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+      			$_POST['avatar'] = $imgName;
+
+      			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
+      			$theUser = saveUser();
+
+      			// Al momento en que se registar vamos a mantener la sesión abierta
+      			setcookie('userLoged', $theUser['email'], time() + 3000);
+
+      			// Logueo al usuario
+      			login($theUser);
+      		}
+      	}
+
+
+ ?>
 ﻿<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Registrate!</title>
+    <!-- Etiqueta meta -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <!-- LLamda a font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Llamada a bootstrap y relacionados -->
@@ -27,6 +97,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Aca va a ir el contenedor del form -->
                 <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 mi-form-contenedor">
@@ -42,22 +113,78 @@
                             <!-- Aca va a ir el formulario en si       -->
                             </div>
                             <div class="mi-principal-form">
-                                  <form role="form" class="" action="index.html" method="post">
+                                  <form role="form" class="" action="" method="post">
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
-                                            <input type="text" name="username" value="" placeholder="Ingresa tu usuario..." class="form-control" id="username-form">
+                                            <input type="text" name="username" value="<?= $username; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInRegister['username']) ? 'is-invalid' : null ?>" id="username-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['username']) ? $errorsInRegister['username'] : null; ?>
+        				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control" id="password-form">
+                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInRegister['password']) ? 'is-invalid' : null ?>" id="password-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['password']) ? $errorsInRegister['password'] : null; ?>
+        				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="text" name="name" value="" placeholder="Ingresa tu nombre..." class="form-control" id="name-form">
+                                            <input type="password" name="rePassword" value="" placeholder="Repite tu password..." class="form-control <?= isset($errorsInRegister['rePassword']) ? 'is-invalid' : null ?>" id="password-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['rePassword']) ? $errorsInRegister['rePassword'] : null; ?>
+        				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="text" name="lastname" value="" placeholder="Ingresa tu apellido..." class="form-control" id="lastname-form">
+                                            <input type="text" name="name" value="<?= $name; ?>" placeholder="Ingresa tu nombre..." class="form-control <?= isset($errorsInRegister['name']) ? 'is-invalid' : null ?>" id="name-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
+        				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="email" name="email" value="" placeholder="Ingresa tu email..." class="form-control" id="email-form">
+                                            <input type="text" name="lastname" value="<?= $lastname; ?>" placeholder="Ingresa tu apellido..." class="form-control <?= isset($errorsInRegister['lastname']) ? 'is-invalid' : null ?>" id="lastname-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['lastname']) ? $errorsInRegister['lastname'] : null; ?>
+        				                            </div>
+                                      </div>
+                                      <div class="form-group">
+                                            <input type="text" name="email" value="<?= $email; ?>" placeholder="Ingresa tu email..." class="form-control <?= isset($errorsInRegister['email']) ? 'is-invalid' : null ?>" id="email-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInRegister['email']) ? $errorsInRegister['email'] : null; ?>
+        				                            </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label><b>País de nacimiento:</b></label>
+								                                <select
+									                                       name="country"
+									                                       class="form-control <?= isset($errorsInRegister['country']) ? 'is-invalid' : null; ?>"
+								                                >
+									                              <option value="">Elegí un país</option>
+									                              <?php foreach ($countries as $code => $country): ?>
+										                            <option
+											                           value="<?= $code ?>"
+											                          <?= $code == $countryFromPost ? 'selected' : null; ?>
+										                            >
+											                          <?= $country ?>
+										                            </option>
+									                              <?php endforeach; ?>
+								                                </select>
+								                                <div class="invalid-feedback">
+          				                              <?= isset($errorsInRegister['country']) ? $errorsInRegister['country'] : null; ?>
+        				                                </div>
+							                        </div>
+                                      <!-- </div> -->
+                                      <div class="form-group">
+                                        <label><b>Imagen de perfil:</b></label>
+								                                  <div class="custom-file">
+									                                           <input
+										                                                   type="file"
+									 	                                                   name="avatar"
+										                                                   class="custom-file-input <?= isset($errorsInRegister['avatar']) ? 'is-invalid' : null; ?>"
+									                                           >
+									                                           <label class="custom-file-label">Choose file...</label>
+									                                 <div class="invalid-feedback">
+	          				                                    <?= isset($errorsInRegister['avatar']) ? $errorsInRegister['avatar'] : null; ?>
+	        				                                 </div>
+								                                   </div>
                                       </div>
                                       <button type="submit" name="button" class=" btn btn-primary mi-boton">Ingresar</button>
                                   </form>
@@ -81,7 +208,7 @@
                       </div>
                 </div>
                </div>
-		<footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
+		             <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
