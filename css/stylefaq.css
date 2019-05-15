@@ -16,7 +16,6 @@ body{
   /* background-image: url(../images/colorclaro.jpg); */
   background-size:cover;
 
-
 }
 ul,
 ol{
@@ -60,8 +59,9 @@ img{
 }
 /* <----fin nav interno---> */
 .cuerpo{
-  padding-top: 160px;
+  padding-top: 300px;
 }
+
 .container{
   margin-right: auto;
   margin-left: auto;
