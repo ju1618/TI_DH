@@ -50,20 +50,13 @@ h3 {
   color: black;
 }
 
-h6 {
-  font-size: 22px;
-  font-weight: 300;
-}
-
 .container {
-  /*border: 3px solid black;*/
   overflow: hidden;
 }
 
 .mi-contenedor {
   padding: 0px 0 0px 0;
   overflow: hidden;
-    /*background-color: white;*/
 }
 
 .mi-contenedor .mis-descripciones {
@@ -71,14 +64,12 @@ h6 {
 }
 
 .mi-contenedor .mis-descripciones p {
-  /*opacity: 0.8;*/
   color: #4bd1b6;
   padding: 0;
   margin: 0;
 }
 
 .mi-detalle-contenedor {
-  /*border: 3px solid blue;*/
   margin-top: 15px;
 }
 
@@ -90,15 +81,6 @@ h6 {
   -webkit-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
   border-bottom: 1px solid white;
-}
-
-.titulo{
-
-}
-.nombre-producto {
-  width: 100%;
-  padding-top: 10px;
-  text-align: center;
 }
 
 .mi-principal-detalle {
