@@ -22,20 +22,20 @@
                 </div>
                 <!-- Aca va a ir el contenedor del form -->
                 <div class="row">
-                      <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 mi-form-contenedor">
+                      <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 mi-detalle-contenedor">
                             <!-- Como si fuera el 'header' del detalle -->
                             <div class="mi-cabecera-detalle">
-                              <div class="mi-contenido-izquierdo">
+                              <div class="titulo">
                                     <h3> Detalle de Producto</h3>
                               </div>
                             </div>
                             <!-- Aca va a ir el contenido en si       -->
                             <div class="mi-principal-detalle">
-                              <div class="mi-contenido-izquierdo">
-                                <h4>Nombre del Producto</h4>
+                              <div class="nombre-producto">
+                                <h4>Mate con diseño</h4>
                               </div>
                               <!--       imagen       -->
-                                <img src="images/mate-de-madera-colorido.jpg" alt="mate-diseño">
+                              <img src="images/mate-de-madera-colorido.jpg" class="img-fluid imagen-producto" alt="mate-diseño">
                               <!--       detalle        -->
                               <div class="">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
