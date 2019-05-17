@@ -1,4 +1,29 @@
+<!-- puedo crear un archivo con arrays de productos y llamarlos tanto en el index como en el detalle de los productos con: nombre, imagen, descripcion y ID. -->
+<?php
+  $pdtos = [
+    [
+      "id" => 1,
+      "nombre" => "Sarasa",
+      "descrip" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ],
+    [
+      "id" => 2,
+      "nombre" => "Sarasa sdfsdfsdfsd",
+      "descrip" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    ]
+  ];
 
+  if (isset($_GET["id"]) && $_GET["id"] <= count($pdtos)) {
+    foreach ($pdtos as $onePdto) {
+      if ($onePdto["id"] == $_GET["id"]) {
+        $elegido = $onePdto;
+      }
+    }
+    var_dump($elegido);
+  }else{
+    echo "No existe un producto con ese ID";
+  }
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>

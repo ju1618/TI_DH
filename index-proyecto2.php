@@ -47,7 +47,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/mate-de-madera-colorido.jpg" alt="mate-diseño">
           <h2>Mate con diseño</h2>
-          <a href="detalle-producto.php"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=1"><span>Detalles</span></a>
           </div>
 
         </div>
