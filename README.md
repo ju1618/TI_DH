@@ -7,12 +7,12 @@ El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los 
 
 ### Contenido-paginas
 
-*Index
-*Detalle de producto (por ahora solo mate)
-*Register
-*Log-in
-*Perfil de Usuario
-*FAQ
+* **Index
+* **Detalle de producto (por ahora solo mate)
+* **Register
+* **Log-in
+* **Perfil de Usuario
+* **FAQ
 
 ## Hojas de estilo
 
