@@ -1,3 +1,5 @@
+<!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -38,7 +40,7 @@
                <li>
                   <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo crear un usuario nuevo?</h4></div>
                   <div class="cd-faq-content respuesta">
-                    Podés crear una cuenta rápidamente haciendo <a class="nav-link"  href="#registrarse">click acá</a>.
+                    Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá</a></strong>.
                     <br>La única información que te vamos a pedir es una cuenta de correo electrónico válida y que elijas una contraseña.
                     <br>Luego de ingresar la información, te vamos a enviar un correo con un enlace para que puedas activar tu cuenta.
                     <br>Si necesitas ayuda con alguno de los pasos, contactanos.
@@ -50,7 +52,7 @@
                   <div class="cd-faq-content respuesta">
                     ¡Modificar tu contraseña es muy fácil! Sólo tenés que seguir estos simples pasos:
                     <ol>
-                      <li>Si es que ya no iniciaste sesión, ingresá a tu <a class="nav-link"  href="#ingresar">cuenta</a>.</li>
+                      <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login.php">cuenta</a></strong>.</li>
                       <li>Una vez que estés dentro de tu cuenta, hacé clic en "Mi Perfil".</li>
                       <li>En el campo "Contraseña" hacé clic en "Cambiar".</li>
                       <li>Ingresá y confirmá tu nueva contraseña, hacé clic en "Enviar" y ¡Listo!.</li>
@@ -66,7 +68,7 @@
               <div class="cd-faq-content respuesta">
                 Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
-                Si aún no lo hiciste, Ingresá al siguiente <a class="nav-link" href="#registro">link</a> y completá los datos.
+                Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.
                 <strong>Pasos para publicar tu anuncio:</strong>
                 <ol>
                   <li>Seleccioná "Ingresar" en el menú de navegación, en el margen superior, y completá los campos con tu mail y contraseña.</li>
