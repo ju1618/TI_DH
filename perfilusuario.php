@@ -71,6 +71,9 @@
          <br>
          <br>
          <a href="#cambiarpass">Cambiar contraseña</a>
+         <br>
+         <br>
+         <a class="dropdown-item" href="logout.php">Salir</a>
       </div>
    </div>
    <?php require_once('footer.php'); ?>

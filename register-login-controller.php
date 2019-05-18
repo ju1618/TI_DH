@@ -4,7 +4,7 @@
 	session_start();
 
 	// Definimos las constantes que necesitamos en nuestro proyecto, de esta manera puedo usar las mismas dentro de las funciones sin tener que usar una variable global o pasarla por parámetro
-	
+
 	define('IMAGE_PATH', dirname(__FILE__) . '/data/avatars/');
 	define('USERS_JSON_PATH', dirname(__FILE__) . '/data/users.json');
 
@@ -98,9 +98,9 @@
 					$ext = pathinfo($avatar['name'], PATHINFO_EXTENSION);
 
 				// 	// Si la extesión del archivo que cargaron NO está en mi array de formatos permitidos
-				  if ( !in_array($ext, ALLOWED_IMAGE_FORMATS) ) {
-				  		$errors['avatar'] = 'Los formatos permitidos son JPG, PNG y GIF';
-					}
+				  // if ( !in_array($ext, ALLOWED_IMAGE_FORMATS) ) {
+				  // 		$errors['avatar'] = 'Los formatos permitidos son JPG, PNG y GIF';
+					// }
 				 }
 
 
