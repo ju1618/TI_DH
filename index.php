@@ -55,7 +55,7 @@
           <div class="col-sm-12 col-md-2 col-lg-4">
           <img src="images/molde-frog.jpg" alt="molde-frog">
           <h2>Molde de rana</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=2"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -63,7 +63,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/cucharon-dino.jpg" alt="cucharon">
           <h2>Cucharon de dinosaurio</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=3"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -72,7 +72,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/rociador-limon.jpg" alt="rociador">
           <h2>Rociador de limón</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=4"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -80,7 +80,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/esparcidor-unicornio.jpg" alt="unicornio">
           <h2>Esparcidor de confites</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=5"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -88,7 +88,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/molde-huevo.jpg" alt="molde">
           <h2>Molde de corazón</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=6"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -102,7 +102,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/mesa-pizarra.jpg" alt="mesa-pizarra">
           <h2>Mesa pizarra</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=7"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -110,7 +110,7 @@
           <div class="col-sm-12 col-md-2 col-lg-4">
           <img src="images/anotador-head.jpg" alt="anotador-head">
           <h2>Anotador de cabeza</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=8"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -118,7 +118,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/basket-cesto.jpg" alt="basket-cesto">
           <h2>Cesto Basket-Office</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=9"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -127,7 +127,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/cup-holder.jpg" alt="cup-holder">
           <h2>Sostén de taza</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=10"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -135,7 +135,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/apoya-pies.jpg" alt="apoya-pies">
           <h2>Apoya pies de escritorio</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=11"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -143,7 +143,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/aire-usb.jpg" alt="aire-usb">
           <h2>Aire frio/calor USB</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=12"><span>Detalles</span></a>
           </div>
 
         </div>
