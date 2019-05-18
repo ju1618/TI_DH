@@ -1,4 +1,3 @@
-<!-- puedo crear un archivo con arrays de productos y llamarlos tanto en el index como en el detalle de los productos con: nombre, imagen, descripcion y ID. -->
 <?php
   $nombreDeSeccion = "Detalle de producto";
 
@@ -7,7 +6,7 @@
 
   $error='';
 
-  // logica para asignar al producto seleccionado
+  // logica para asignar al producto seleccionado por lo que viene por GET
   if (isset($_GET["id"]) && $_GET["id"] <= count($pdtos)) {
     foreach ($pdtos as $onePdto) {
       if ($onePdto["id"] == $_GET["id"]) {
@@ -15,7 +14,7 @@
       }
     }
   }else{
-    $error="No existe un producto con ese ID";
+    $error="<strong> No existe un producto con ese ID </strong>";
   }
 ?>
 
