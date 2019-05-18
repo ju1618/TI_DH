@@ -1,23 +1,19 @@
 <!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
-
+<?php  $nombreDeSeccion = FAQ ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <title>FAQ</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/navstyle.css">
-    <link rel="stylesheet" href="css/stylefaq.css">
 
+    <?php   require_once 'head.php' ?>
+    <link rel="stylesheet" href="css/stylefaq.css">
   </head>
-  <body class="cuerpo">
+
+  <body class="faq-cuerpo">
 
     <?php require_once('nav-bar.php'); ?>
     <!-- Inicio de nav interno de FAQ--->
       <nav class="navbar navbar-dark fixed-top faq-temas justify-content-center">
         <div class="justify-content-center">
-           <ul class="navbar-nav mr-auto categorias nav-pills nav-justified">
+           <ul class="navbar-nav mr-auto faq-categorias nav-pills nav-justified">
             <li class="nav-item">
               <a class="nav-link" href="#sesion">Configuración de cuenta</a>
             </li>
@@ -32,14 +28,14 @@
       </nav>
       <!-- FIN de nav interno FAQ -->
 
-    <div class="container">
+    <div class="faq-container">
 
        <div class="cd-faq-items">
          <ul>
              <li class="cd-faq-title cd-faq-group" id="sesion"><h2>Configuración de cuenta</h2></li>
                <li>
-                  <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo crear un usuario nuevo?</h4></div>
-                  <div class="cd-faq-content respuesta">
+                  <div class="cd-faq-trigger faq-pregunta" href="#0"><h4>¿Cómo crear un usuario nuevo?</h4></div>
+                  <div class="cd-faq-content faq-respuesta">
                     Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá</a></strong>.
                     <br>La única información que te vamos a pedir es una cuenta de correo electrónico válida y que elijas una contraseña.
                     <br>Luego de ingresar la información, te vamos a enviar un correo con un enlace para que puedas activar tu cuenta.
@@ -48,8 +44,8 @@
                   <br>
                </li>
                <li>
-                  <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo cambio mi contraseña?</h4></div>
-                  <div class="cd-faq-content respuesta">
+                  <div class="cd-faq-trigger faq-pregunta" href="#0"><h4>¿Cómo cambio mi contraseña?</h4></div>
+                  <div class="cd-faq-content faq-respuesta">
                     ¡Modificar tu contraseña es muy fácil! Sólo tenés que seguir estos simples pasos:
                     <ol>
                       <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login.php">cuenta</a></strong>.</li>
@@ -64,8 +60,8 @@
 
             <li class="cd-faq-title cd-faq-group" id="publicar"><h2>Publicar</h2></li>
             <li>
-              <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo publico un producto?</h4></div>
-              <div class="cd-faq-content respuesta">
+              <div class="cd-faq-trigger faq-pregunta" href="#0"><h4>¿Cómo publico un producto?</h4></div>
+              <div class="cd-faq-content faq-respuesta">
                 Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
                 Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.
@@ -85,8 +81,8 @@
 
             <li class="cd-faq-title cd-faq-group"id="compra"><h2>Compra</h2></li>
             <li>
-              <div class="cd-faq-trigger pregunta" href="#0"><h4>¿Cómo elegir a qué vendedor comprarle?</h4></div>
-              <div class="cd-faq-content respuesta">
+              <div class="cd-faq-trigger faq-pregunta" href="#0"><h4>¿Cómo elegir a qué vendedor comprarle?</h4></div>
+              <div class="cd-faq-content faq-respuesta">
                 Si estás buscando un <b>servicio</b>, te recomendamos que leas las opiniones de las personas que ya lo contrataron. Y si querés comprar un auto o un inmueble, siempre es bueno llamar al anunciante para coordinar una visita y sacarte todas las dudas sobre lo que querés comprar.
                 <br><strong>Leé en detalle la publicación</strong>
                 <br>Revisá atentamente toda la publicación: prestá atención a la descripción y a las fotos para estar seguro de las condiciones de venta que propone el vendedor.

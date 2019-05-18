@@ -4,7 +4,7 @@
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css"); /*normalize*/
 
-@import url("navstyle.css");
+
 
 *{
   box-sizing: border-box;
@@ -17,12 +17,10 @@ body {
   line-height: 30px;
   color: #fff;
   text-align: center;
-  /*background-color: #4bd1b6;*/
   background-image: url("../images/colorclaro.jpg");
   background-size: cover;
   background-color: gray;
   overflow: auto;
-  /*gg, vvv, vvvvv*/
 }
 
 strong {
@@ -50,27 +48,24 @@ h3 {
   color: black;
 }
 
-.container {
+.container-detalle {
   overflow: hidden;
 }
 
-.mi-contenedor {
+.contenedor-detalle {
   padding: 0px 0 0px 0;
   overflow: hidden;
+  margin-top: 15px;
 }
 
-.mi-contenedor .mis-descripciones {
+.contenedor-detalle .detalle-descripciones {
   margin: 20px 0 10px 0;
 }
 
-.mi-contenedor .mis-descripciones p {
+.mi-contenedor .detalle-descripciones p {
   color: #4bd1b6;
   padding: 0;
   margin: 0;
-}
-
-.mi-detalle-contenedor {
-  margin-top: 15px;
 }
 
 .mi-cabecera-detalle {

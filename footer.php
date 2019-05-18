@@ -17,6 +17,8 @@
     color: black;
   }
   </style>
+
+  <!--       agregar mapita y los links repetidos en el footer tipo pagina       -->
   <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mis-redes-sociales">
             <p>También estamos en las redes!</p>

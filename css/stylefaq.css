@@ -4,7 +4,7 @@
 
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css"); /*normalize*/
 
-@import url("navstyle.css");
+
 
 *{
   box-sizing: border-box;
@@ -13,7 +13,6 @@
 body{
   font-family: "Fira Sans", sans-serif; /*esto es para que si no carga la tipografia roboto me cargue la sans-serif*/
   background-color: rgba(75,145,214,0.11);
-  /* background-image: url(../images/colorclaro.jpg); */
   background-size:cover;
 
 }
@@ -58,11 +57,11 @@ img{
   background-color: rgb(207,23,81);
 }
 /* <----fin nav interno---> */
-.cuerpo{
+.faq-cuerpo{
   padding-top: 180px;
 }
 
-.container{
+.faq-container{
   margin-right: auto;
   margin-left: auto;
   padding-top: 15px;
@@ -71,19 +70,19 @@ img{
   /* margin-top: 160px; */
   /* display: inline-flex; */
 }
-.categorias{
+.faq-categorias{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: space-around;
 }
 
-.categorias li{
+.faq-categorias li{
   display: inline-block;
   align-self: center;
 }
 
-.categorias li a{ /*ver como hacer para que todo el link sea boton*/
+.faq-categorias li a{
   color: white;
   display: inline-block;
   text-decoration: none;
@@ -92,12 +91,12 @@ img{
   background-color: rgb(207,23,81);
 }
 
-.respuesta li{
+.faq-respuesta li{
   list-style: initial;
   margin-left: 2%;
 }
 
-.respuesta a {
+.faq-respuesta a {
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -105,14 +104,14 @@ img{
 
 
 @media screen and (max-width: 700px) {
-  .row, .categorias {
+  .row, .faq-categorias {
     flex-direction: column;
   }
   ul.faqnav li.right,
   ul.faqnav li {
       float: none;
   }
-  .container{
+  .faq-container{
     margin-top: 230px;
   }
 }

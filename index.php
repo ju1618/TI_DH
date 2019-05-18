@@ -47,7 +47,7 @@
           <div class="col-sm-1 col-md-2 col-lg-4">
           <img src="images/mate-de-madera-colorido.jpg" alt="mate-diseño">
           <h2>Mate con diseño</h2>
-          <a href="#"><span>Detalles</span></a>
+          <a href="detalle-producto.php?id=1"><span>Detalles</span></a>
           </div>
 
         </div>
@@ -166,6 +166,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> <script src="js/bootstrap.min.js"></script>
- 
+
   </body>
 </html>
