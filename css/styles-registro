@@ -143,7 +143,7 @@ h6 {
 
 .mis-redes-sociales p {
   color: white;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 input[type="text"],
@@ -203,7 +203,7 @@ textarea.form-control:focus {
 
 .mi-texto-footer {
   padding-top: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 
 }
 
