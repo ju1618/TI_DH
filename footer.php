@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/styles-footer.css">
-
+<!-- LLamda a font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <footer class="container mx-auto st-footer col-12">
 
@@ -7,7 +8,7 @@
       <div class="mis-redes-sociales align-self-center">
         <br>
         <p>También estamos en las redes!</p>
-        <div class="mis-botones-redes">
+        <div class="mis-botones-redes d-flex justify-content-between align-items-center">
           <a class="mi-boton-redsocial" href="#">
               <i class="fab fa-facebook"></i>
           </a>
@@ -29,6 +30,10 @@
         <li> <a href="registrer.php">Registrarse</a> </li>
         <li> <a href="faqs.php">Preguntas Frecuentes</a> </li>
       </ol>
+    </div>
+    <div class="contacto"> <!-- /*centrar*/  -->
+      Calle falsa 123, CABA <br>
+      telefono: 555-5555 <br>
     </div>
 
     <div class="mapa">
