@@ -1,6 +1,6 @@
 <!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
 <!-- probar hacer un foreach para mostrar las preguntas y respuestas y tener un array con preguntas y respuesas en otro archivo -->
-<?php  $nombreDeSeccion = FAQ ?>
+<?php  $nombreDeSeccion = "Preguntas Frecuentes" ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 
@@ -13,15 +13,6 @@
     <?php require_once('nav-bar.php'); ?>
 
 <!--                        inicio de contenido FAQ            -->
-
-<!-- NOTA:
-1. ponerle una clase a los titulos h4 para ponerles de fondo el fucsia y seguir con la misma estetica. que ocupe todo el ancho
-2. arreglar el margin top del <body>
-3. cambiar la estetica de los titulos desplegables
-4. cambiar los fondos de los titulos desplegables por el mismo del fondo o hacerlos trasnparentes
-</body>
--->
-
 <div class="accordion faq-tema" id="sesion">
   <h4>Configuracion de Cuenta</h4>
   <div class="card">
@@ -121,5 +112,5 @@
   </body>
 
   <?php require_once('footer.php'); ?>
-  
+
 </html>

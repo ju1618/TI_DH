@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="css/styles-footer.css">
+
+
 <footer class="container mx-auto st-footer col-12">
 
   <div class="redes d-flex justify-content-center">
