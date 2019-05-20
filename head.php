@@ -13,4 +13,3 @@
   <!--                links a hojas de estilo nav-bar y footer           -->
   <link rel="stylesheet" href="css/navstyle.css">
   <link rel="stylesheet" href="css/styles-footer.css">
-  <link rel="stylesheet" href="css/stylefaq.css">
