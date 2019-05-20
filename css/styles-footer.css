@@ -36,6 +36,10 @@
     padding-left: 50px;
   }
 
+  .lista-de-secciones li a{
+    text-decoration: none;
+  }
+
   .mapa{
     padding-right: 20px;
   }
