@@ -12,6 +12,11 @@
   </head>
   <body>
       <?php require_once('nav-bar.php'); ?>
+      <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+				<!-- Preguntamos si NO está logueado el usuario para mostrar los enlaces Register y Login -->
+									<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+							</ul>
     <div class="contenedorprincipal">
        <div class="contenedor1">
           <br>
@@ -20,7 +25,7 @@
           <br>
                 <h1><center>Mi Perfil</center></h1>
                 <br>
-            <h2>Hola, Tomás!!!</h2>
+            <h2>Hola Usuario!!!</h2>
           <br>
           <br>
           <a class="item" href="#MisDatos">Mis Datos</a>
@@ -38,7 +43,7 @@
           <br>
           <h2 id = "MisDatos"><em><strong><center>Mis datos</center></strong></em></li></h2>
           <br>
-          <p><strong>Nombre y Apellido:</strong> Tomás Gomez</p>
+          <p><strong>Nombre y Apellido:</strong> Usuario</p>
           <br>
           <p><strong>Dirección:</strong> Av. Rivadavia 4000</p>
           <br>
@@ -76,6 +81,7 @@
          <a class="dropdown-item" href="logout.php">Salir</a>
       </div>
    </div>
+
    <?php require_once('footer.php'); ?>
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
