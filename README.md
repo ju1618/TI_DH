@@ -26,6 +26,7 @@ Las opciones que se muestran depende si está logueado o no el usuario.
 ## Registración
 
 La contraseña tiene que tener mas de 5 caracteres, no puede tener espacio y tiene que tener "DH" en alguna parte.
+No puede repetirse ni el nombre de usuario ni el mail para usuarios nuevos.
 
 ## Logueo
 
