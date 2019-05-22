@@ -50,7 +50,7 @@
           <li>En el campo "Contraseña" hacé clic en "Cambiar".</li>
           <li>Ingresá y confirmá tu nueva contraseña, hacé clic en "Enviar" y ¡Listo!.</li>
         </ol>
-        <br>Si luego de realizar todos los pasos, no pudiste cambiar tu contraseña, por favor  <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactate</strong></a> con nuestro equipo de Soporte.
+        <br>Si luego de realizar todos los pasos, no pudiste cambiar tu contraseña, por favor  <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactanos</strong></a> con nuestro equipo de Soporte.
       </div>
     </div>
   </div>
