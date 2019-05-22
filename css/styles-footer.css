@@ -12,6 +12,7 @@
     padding-left: 15px;
     padding-right: 15px;
     }
+
   .mi-boton-redsocial {
     color: white;
   }
@@ -38,6 +39,7 @@
 
   .lista-de-secciones li a{
     text-decoration: none;
+    color: #000;
   }
 
   .mapa{
