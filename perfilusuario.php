@@ -1,15 +1,10 @@
+<?php $nombreDeSeccion = "Mi perfil"?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi perfil</title>
     <!--Vinculción externa de CSS-->
+  <?php   require_once 'head.php' ?>
 <link rel="stylesheet" href="css/perfilstyles.css">
-<link rel="stylesheet" href="css/navstyle.css">
-    <!--Bootstrap CDN-->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+</head>
   <body>
       <?php require_once('nav-bar.php'); ?>
       <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
