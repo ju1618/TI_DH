@@ -126,7 +126,7 @@ img{
   border-radius: 10px 10px;
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   .contenedorprincipal {
     width: 100vw;
   }
@@ -137,4 +137,4 @@ img{
     width: 100vw;
     clear: both;
   }
-}
+} */

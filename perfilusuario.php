@@ -53,13 +53,13 @@ require_once 'register-login-controller.php';
           <br>
           <h2 id = "MisDatos"><em><strong><center>Mis datos</center></strong></em></li></h2>
           <br>
-          <p><strong>Usuario:</strong><?= $theUser['username']; ?></p>
+          <p><strong>Usuario: </strong><?= $theUser[ 'username']; ?></p>
           <br>
-          <p><strong>Nombre:</strong><?= $theUser['name']; ?></p>
+          <p><strong>Nombre: </strong><?= $theUser[ 'name']; ?></p>
           <br>
-          <p><strong>Pais:</strong><?= $theUser['country']['name']; ?></p>
+          <p><strong>Pais: </strong><?= $theUser[ 'country']; ?></p>
           <br>
-          <p><strong>Email:</strong><?= $theUser['email']; ?></p>
+          <p><strong>Email: </strong><?= $theUser[ 'email']; ?></p>
           <br>
           <br>
       </div>
