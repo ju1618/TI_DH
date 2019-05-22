@@ -1,3 +1,46 @@
+<?php
+	// Incluimos el controlador del registro-login
+	// De esta manera tengo el scope a la funciones que necesito
+	require_once 'register-login-controller.php';
+
+	// Si está logueda la persona la redirijo al profile
+	if ( isLogged() ) {
+		header('location: profile.php');
+		exit;
+	}
+
+	// Generamos nuestro array de errores interno
+	$errorsInLogin = [];
+
+	// Persistimos el email
+	$email = '';
+
+	if ($_POST) {
+		// Persistimos el email con lo vino por $_POST
+		$email = trim($_POST['email']);
+
+		// La función loginValidate() nos retorna el array de errores que almacenamos en esta variable
+		$errorsInLogin = loginValidate();
+		// var_dump($errorsInLogin);
+
+		if ( !$errorsInLogin ) {
+			// Traemos al usuario que vamos a loguear
+			$userToLogin = getUserByEmail($email);
+
+			// Preguntamos si quiere ser recordado
+			if ( isset($_POST['rememberUser']) ) {
+				setcookie('userLoged', $email, time() + 3000);
+			}
+
+			// Logeamos al usuario
+			login($userToLogin);
+		}
+	}
+
+	$pageTitle = 'Login';
+	// require_once 'partials/head.php';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -46,13 +89,19 @@
                             <!-- Aca va a ir el formulario en si       -->
                             </div>
                             <div class="mi-principal-form">
-                                  <form role="form" class="" action="index.html" method="post">
+                                  <form role="form" class="" action="" method="post">
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
-                                            <input type="text" name="username" value="" placeholder="Ingresa tu usuario..." class="form-control" id="username-form">
+                                            <input type="text" name="email" value="<?= $email; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInLogin['email']) ? 'is-invalid' : null ?>" id="email-form">
+                                            <div class="invalid-feedback">
+                                                  <?= isset($errorsInLogin['email']) ? $errorsInLogin['email'] : null; ?>
+                                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control" id="password-form">
+                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInLogin['password']) ? 'is-invalid' : null ?>" id="password-form">
+                                            <div class="invalid-feedback">
+          				                                <?= isset($errorsInLogin['password']) ? $errorsInLogin['password'] : null; ?>
+        				                            </div>
                                       </div>
                                       <button type="submit" name="button" class=" btn btn-primary mi-boton">Ingresar</button>
                                   </form>

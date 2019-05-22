@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 	// Inicio la sesión para tener acceso a $_SESSION en todos los archivos
 	session_start();
@@ -251,9 +251,9 @@
 		// Recorro el array de usuarios
 		foreach ($allUsers as $oneUser) {
 			// Si la posición "email" del usuario en la iteración coincide con el email que pasé como parámetro
-			var_dump($oneUser['username']);
+			//var_dump($oneUser['username']);
 			if ($oneUser['username'] == $username) {
-				echo 'nombre igual a email/username';
+				//echo 'nombre igual a email/username';
 				return true;
 			}
 		}
@@ -281,7 +281,7 @@
 		} /*elseif ( !filter_var($email, FILTER_VALIDATE_EMAIL) ) { // Si el campo $email no es un email válido
 			$errors['email'] = 'Introducí un formato de email válido';
 		} */elseif (( !emailExist($email)) && ( !usernameExist($email)) ) { // Si no existe el email
-			// $errors['email'] = 'Ese correo no está registrado en nuestra base de datos';
+			// $errors['email'] = 'Ese correo/username no está registrado en nuestra base de datos';
 			$errors['email'] = 'Las credenciales no coinciden';
 		} else {
 			// Si pasamos las 3 validaciones anteriores, busco y  obtengo al usuario con el email que llegó por $_POST
@@ -301,7 +301,8 @@
 		if ( empty($password) ) {
 			$errors['password'] = 'El campo password es obligatorio';
 		}
-
+		// var_dump($errors);
+		// exit;
 		// Retorno el array de errores con los mensajes de error
 		return $errors;
 	}
