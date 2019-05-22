@@ -1,4 +1,19 @@
-<?php $nombreDeSeccion = "Mi perfil"?>
+<?php
+
+require_once 'register-login-controller.php';
+
+	// Si no estÃ¡ logueda la persona la redirijo al login
+	if ( !isLogged() ) {
+		header('location: login.php');
+		exit;
+	}
+
+	$pageTitle = 'Profile';
+
+
+	$theUser = $_SESSION['userLoged'];
+
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
     <!--Vinculción externa de CSS-->
@@ -15,12 +30,12 @@
     <div class="contenedorprincipal">
        <div class="contenedor1">
           <br>
-          <center><img class="fotousuario" src="images/imagen.png" alt="foto del usuario"></center>
+          <center><img class="fotousuario" src="data/avatars/<?= $theUser['avatar']; ?>" alt="foto del usuario"></center>
           <br>
           <br>
                 <h1><center>Mi Perfil</center></h1>
                 <br>
-            <h2>Hola Usuario!!!</h2>
+                <h2>Hola <?= $theUser['name']; ?></h2>
           <br>
           <br>
           <a class="item" href="#MisDatos">Mis Datos</a>
@@ -38,13 +53,14 @@
           <br>
           <h2 id = "MisDatos"><em><strong><center>Mis datos</center></strong></em></li></h2>
           <br>
-          <p><strong>Nombre y Apellido:</strong> Usuario</p>
+          <p><strong>Usuario:</strong><?= $theUser['username']; ?></p>
           <br>
-          <p><strong>Dirección:</strong> Av. Rivadavia 4000</p>
+          <p><strong>Nombre:</strong><?= $theUser['name']; ?></p>
           <br>
-          <p><strong>Ciudad:</strong> Capital Federal</p>
+          <p><strong>Pais:</strong><?= $theUser['country']['name']; ?></p>
           <br>
-          <p><strong>Provincia:</strong> Buenos Aires</p>
+          <p><strong>Email:</strong><?= $theUser['email']; ?></p>
+          <br>
           <br>
       </div>
       <div class="contenedor3">
