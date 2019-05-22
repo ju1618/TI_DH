@@ -16,7 +16,7 @@ El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los 
 
 ## Hojas de estilo
 
-Se utilizó como base las clases de bootstrap,combinado con las hojas de estilo propias.
+Se utilizó como base las clases de bootstrap, combinado con las hojas de estilo propias.
 [Bootstrap](https://getbootstrap.com/) 
 
 ## Nav-Bar
