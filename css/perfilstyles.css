@@ -103,7 +103,7 @@ img{
   background-color: rgba(45,220,123,0.11);
   padding: 30px;
   margin: 10px;
-  height: 460px;
+  height: 550px;
   border: 10px solid #F52854;
   overflow: hidden;
   border-radius: 10px 10px;
@@ -128,13 +128,13 @@ img{
 
 @media screen and (max-width: 400px) {
   .contenedorprincipal {
-    width: 100%;
+    width: 100vw;
   }
 }
 
 @media screen and (max-width: 800px) {
   .contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
-    width: 100%;
+    width: 100vw;
     clear: both;
   }
 }

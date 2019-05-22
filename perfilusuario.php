@@ -62,6 +62,7 @@
          <br>
          <h2 id="facturas"><em><strong><center>Facturación</center></strong></em></li></h2>
          <img class="facturadecompra" src="images/facturamp.png" alt="factura de compra">
+          <a href="facturamp.php">Factura de compra</a>.
       </div>
       <div class="contenedor5">
          <br>
