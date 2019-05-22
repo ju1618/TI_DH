@@ -28,61 +28,37 @@ img{
 
 /*--------hasta acá es el seteo de los estilos de la pagina-------------*/
 
-/* <----inicio nav interno---> */
 
-.faq-temas{
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position:fixed;
-  width:100%;
-  height:auto;
-  left: 0;
-  top: 110px;
-  clear:both;
-  z-index: 150;
-  padding:0;
-  margin-top:0;
-  background-color: rgba(207,23,81);
-}
-
-.faq-temas li a:hover {
-  background-color: rgb(207,23,81);
-}
-/* <----fin nav interno---> */
 .faq-cuerpo{
-  padding-top: 180px;
-}
-
-.faq-container{
+  padding-top: 110px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 15px;
-  /* overflow:auto;
-  clear:both; */
-  /* margin-top: 160px; */
-  /* display: inline-flex; */
-}
-.faq-categorias{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: space-around;
 }
 
-.faq-categorias li{
-  display: inline-block;
-  align-self: center;
+.faq-tema{
+  margin-top: 15px;
 }
 
-.faq-categorias li a{
-  color: white;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  align-self: center;
-  background-color: rgb(207,23,81);
+.faq-pregunta-contenedor{
+  background-size:cover;
+  background-color: rgba(207,23,81);
+  padding: inherit;
 }
+
+.faq-pregunta{
+  background-size:cover;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+ }
+
+ .faq-pregunta:hover{
+   color: rgb(75,209,182);
+ }
+
 
 .faq-respuesta li{
   list-style: initial;
@@ -93,18 +69,4 @@ img{
   margin: 0;
   padding: 0;
   display: inline-block;
-}
-
-
-@media screen and (max-width: 700px) {
-  .row, .faq-categorias {
-    flex-direction: column;
-  }
-  ul.faqnav li.right,
-  ul.faqnav li {
-      float: none;
-  }
-  .faq-container{
-    margin-top: 230px;
-  }
 }

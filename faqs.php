@@ -1,6 +1,6 @@
 <!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
 <!-- probar hacer un foreach para mostrar las preguntas y respuestas y tener un array con preguntas y respuesas en otro archivo -->
-<?php  $nombreDeSeccion = FAQ ?>
+<?php  $nombreDeSeccion = "Preguntas Frecuentes" ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 
@@ -11,49 +11,22 @@
   <body class="faq-cuerpo">
 
     <?php require_once('nav-bar.php'); ?>
-    <!-- Inicio de nav interno de FAQ    NOTA: lo saque xq no puedo resolver el tema de que se va al 0 del viewport--->
-
-      <!-- <nav class="navbar navbar-dark fixed-top faq-temas justify-content-center">
-        <div class="justify-content-center">
-           <ul class="navbar-nav mr-auto faq-categorias nav-pills nav-justified">
-            <li class="nav-item">
-              <a class="nav-link" href="#sesion">Configuración de cuenta</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#publicar">Publicar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#compra">Compra</a>
-            </li>
-         </ul>
-        </div>
-      </nav> -->
-<!--                  FIN de nav interno FAQ                  -->
 
 <!--                        inicio de contenido FAQ            -->
-
-<!-- NOTA:
-1. ponerle una clase a los titulos h4 para ponerles de fondo el fucsia y seguir con la misma estetica. que ocupe todo el ancho
-2. arreglar el margin top del <body>
-3. cambiar la estetica de los titulos desplegables
-4. cambiar los fondos de los titulos desplegables por el mismo del fondo o hacerlos trasnparentes
-</body>
--->
-
-<div class="accordion" id="sesion">
+<div class="accordion faq-tema" id="sesion">
   <h4>Configuracion de Cuenta</h4>
   <div class="card">
-    <div class="card-header" id="headingUsuarioNuevo">
+    <div class="card-header faq-pregunta-contenedor" id="headingUsuarioNuevo">
       <h2 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#usuarioNuevo" aria-expanded="true" aria-controls="collapseUsuarioNuevo">
+        <button class="btn btn-link faq-pregunta" type="button" data-toggle="collapse" data-target="#usuarioNuevo" aria-expanded="true" aria-controls="collapseUsuarioNuevo">
           <h5>¿Cómo crear un usuario nuevo?</h5>
         </button>
       </h2>
     </div>
 
-    <div id="usuarioNuevo" class="collapse show" aria-labelledby="headingUsuarioNuevo" data-parent="#sesion">
-      <div class="card-body">
-        Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá</a></strong>
+    <div id="usuarioNuevo" class="collapse" aria-labelledby="headingUsuarioNuevo" data-parent="#sesion">
+      <div class="card-body faq-respuesta">
+        Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá. </a></strong>
         La única información que te vamos a pedir es una cuenta de correo electrónico válida y que elijas una contraseña.
         Luego de ingresar la información, te vamos a enviar un correo con un enlace para que puedas activar tu cuenta.
         Si necesitas ayuda con alguno de los pasos, contactanos.
@@ -61,15 +34,15 @@
     </div>
   </div>
   <div class="card">
-    <div class="card-header" id="headingCambioContrasenia">
+    <div class="card-header faq-pregunta-contenedor" id="headingCambioContrasenia">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cambioContrasenia" aria-expanded="false" aria-controls="collapseCambioContrasenia">
+        <button class="btn btn-link collapsed faq-pregunta" type="button" data-toggle="collapse" data-target="#cambioContrasenia" aria-expanded="false" aria-controls="collapseCambioContrasenia">
           <h5>¿Cómo cambio mi contraseña?</h5>
         </button>
       </h2>
     </div>
     <div id="cambioContrasenia" class="collapse" aria-labelledby="headingCambioContrasenia" data-parent="#sesion">
-      <div class="card-body">
+      <div class="card-body faq-respuesta">
         ¡Modificar tu contraseña es muy fácil! Sólo tenés que seguir estos simples pasos:
         <ol>
           <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login.php">cuenta</a></strong></li>
@@ -83,18 +56,18 @@
   </div>
 </div>
 
-<div class="accordion" id="publicar">
+<div class="accordion faq-tema" id="publicar">
   <h4>Publicar</h4>
   <div class="card">
-    <div class="card-header" id="headingComoPublicar">
+    <div class="card-header faq-pregunta-contenedor" id="headingComoPublicar">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#comoPublicar" aria-expanded="false" aria-controls="collapseComoPublicar">
+        <button class="btn btn-link collapsed faq-pregunta" type="button" data-toggle="collapse" data-target="#comoPublicar" aria-expanded="false" aria-controls="collapseComoPublicar">
           <h5>¿Cómo publico un producto?</h5>
         </button>
       </h2>
     </div>
     <div id="comoPublicar" class="collapse" aria-labelledby="headingComoPublicar" data-parent="#sesion">
-      <div class="card-body">
+      <div class="card-body faq-respuesta">
         Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
         Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.
@@ -113,18 +86,18 @@
   </div>
 </div>
 
-<div class="accordion" id="compra">
+<div class="accordion faq-tema" id="compra">
   <h4>Compra</h4>
   <div class="card">
-    <div class="card-header" id="headingAQuienComprar">
+    <div class="card-header faq-pregunta-contenedor" id="headingAQuienComprar">
       <h2 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#aQuienComprar" aria-expanded="false" aria-controls="collapseAQuienComprar">
+        <button class="btn btn-link collapsed faq-pregunta" type="button" data-toggle="collapse" data-target="#aQuienComprar" aria-expanded="false" aria-controls="collapseAQuienComprar">
           <h5>¿Cómo elegir a qué vendedor comprarle?</h5>
         </button>
       </h2>
     </div>
     <div id="aQuienComprar" class="collapse" aria-labelledby="headingAQuienComprar" data-parent="#compra">
-      <div class="card-body">
+      <div class="card-body faq-respuesta">
         Si estás buscando un <b>servicio</b>, te recomendamos que leas las opiniones de las personas que ya lo contrataron. Y si querés comprar un auto o un inmueble, siempre es bueno llamar al anunciante para coordinar una visita y sacarte todas las dudas sobre lo que querés comprar.
         <br><strong>Leé en detalle la publicación</strong>
         <br>Revisá atentamente toda la publicación: prestá atención a la descripción y a las fotos para estar seguro de las condiciones de venta que propone el vendedor.
@@ -136,8 +109,8 @@
 
 <!--                       FIN de contenido  FAQ                -->
 
-
-    <?php require_once('footer.php'); ?>
-    
   </body>
+
+  <?php require_once('footer.php'); ?>
+
 </html>

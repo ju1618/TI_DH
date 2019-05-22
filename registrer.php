@@ -49,8 +49,8 @@ if ($_POST) {
 
       			// // Guardo la imagen y obtengo el nombre aleatorio creado
       			$imgName = saveImage();
-            //
-      			// // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+            // //
+      			// // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
       			$_POST['avatar'] = $imgName;
 
       			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
@@ -85,6 +85,14 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
     <link rel="stylesheet" href="css/styles-registro.css">
+		<script>
+			fetch('https://restcountries.eu/rest/v2/all');
+			.then((respuesta)=> {
+				return.respuesta.json;
+			}) then((respuesta)=> {
+				document.getElementById('country').value = respuesta.name;
+			}) ;
+		</script>
   </head>
   <body>
       <div class="mi-contenedor">
@@ -113,7 +121,7 @@ if ($_POST) {
                             <!-- Aca va a ir el formulario en si       -->
                             </div>
                             <div class="mi-principal-form">
-                                  <form role="form" class="" action="" method="post">
+                                  <form role="form" class="" action="" method="post" enctype="multipart/form-data">
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
                                             <input type="text" name="username" value="<?= $username; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInRegister['username']) ? 'is-invalid' : null ?>" id="username-form">
