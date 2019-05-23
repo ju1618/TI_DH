@@ -16,12 +16,21 @@ El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los 
 
 ## Hojas de estilo
 
-Se utilizó como base las clases de bootstrap,combinado con las hojas de estilo propias.
+Se utilizó como base las clases de bootstrap, combinado con las hojas de estilo propias.
 [Bootstrap](https://getbootstrap.com/) 
+
+## Nav-Bar y Footer
+
+Las opciones que se muestran depende si está logueado o no el usuario.
 
 ## Registración
 
-Agregar las condiciones de registración
+La contraseña tiene que tener mas de 5 caracteres, no puede tener espacio y tiene que tener "DH" en alguna parte.
+No puede repetirse ni el nombre de usuario ni el mail para usuarios nuevos.
+
+## Logueo
+
+Es posible loguearse tanto con el mail como con el usuario.
 
 
 ## Authors

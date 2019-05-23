@@ -1,6 +1,6 @@
 <!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
 <!-- probar hacer un foreach para mostrar las preguntas y respuestas y tener un array con preguntas y respuesas en otro archivo -->
-<?php  $nombreDeSeccion = "Preguntas Frecuentes" ?>
+<?php  $pageTitle = "Preguntas Frecuentes" ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 

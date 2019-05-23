@@ -1,6 +1,56 @@
 body{
-   background-color: #009688; 
+   background-color: white;
 }
 #carouselExampleInterval {
   margin: 5px 10px;
+  /* border: solid 5px red; */
+  position: relative;
+  padding-top: 60px;
+}
+.card img {
+  max-height: 133px;
+}
+.card-title h5 {
+  height: 30px;
+}
+
+.carousel-control-prev img,
+.carousel-control-next img {
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+}
+
+.carousel-control-prev {
+  left: auto;
+  right: 50px !important;
+}
+.title-product {
+  font-family: 'Fira Sans', sans-serif;
+  color:rgb(87, 155, 101);
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+}
+.title-product-2 {
+  font-family: 'Fira Sans', sans-serif;
+  color:rgb(155, 87, 128);
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+}
+
+#carouselExampleInterval2 {
+  margin: 5px 10px;
+  /* border: solid 5px red; */
+  position: relative;
+  padding-top: 60px;
 }
