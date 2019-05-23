@@ -285,3 +285,50 @@ margin: 5px;
 width: 20vw;
 padding-top: 10px;
 }
+#carouselExampleInterval {
+   position: relative;
+}
+.carousel-control-prev  img,
+.carousel-control-next img {
+  width: 100%;
+  position:relative;
+  top: 25%;
+
+}
+.carousel-control-prev
+.carousel-control-next {
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+}
+.arrow-control{
+  background-color: rgb(193, 193, 193);
+  width: 25px;
+  height: 65px;
+  border-radius: 2px;
+}
+
+.carousel-control-prev .arrow-control{
+  display: none;
+}
+.carousel-control-next .arrow-control{
+  display: none;
+
+}
+
+.carousel-control-prev:hover .arrow-control,
+.carousel-control-next:hover .arrow-control{
+  display: block;
+}
+
+.carousel-item a {
+  display: none;
+  text-decoration: none;
+}
+.carousel-item:hover a{
+  display: block;
+}
+.carousel-item .logo-mkp{
+  padding:30px 500px;
+}

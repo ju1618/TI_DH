@@ -14,20 +14,20 @@ body{
   height: 30px;
 }
 
-.carousel-control-prev img,
-.carousel-control-next img {
+.carousel-product .carousel-control-prev img,
+.carousel-product .carousel-control-next img {
   width: 100%;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel-product .carousel-control-prev,
+.carousel-product .carousel-control-next {
   width: 40px;
   height: 40px;
   position: absolute;
   top: 0;
 }
 
-.carousel-control-prev {
+.carousel-product .carousel-control-prev {
   left: auto;
   right: 50px !important;
 }
