@@ -16,7 +16,9 @@
 
 
       <header>
-        <?php require_once("nav-bar.php");
+        <?php
+        include "head.php";
+         require_once("nav-bar.php");
         ?>
         <!-- <nav class="navbar navbar-expand-sm navbar-expand-md navbar-dark fixed-top faq-temas justify-content-center">
           <button class="navbar-toggler" type="button" >
@@ -40,58 +42,62 @@
       <br><br>
       <?php require_once("carousel.php") ?>
 
+      <div class="carousel-product">
+        <?php require_once("carousel-product.php") ?>
+      </div>
 
-      <div id="cocina" class="main-content-product">
 
-        <div class="row" id="content-product">
-          <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="images/mate-de-madera-colorido.jpg" alt="mate-diseño">
-          <h2>Mate con diseño</h2>
-          <a href="detalle-producto.php?id=1"><span>Detalles</span></a>
-          </div>
+      <!-- <div id="cocina" class="main-content-product">
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        </div>
-        <div class="row" id="content-product">
-          <div class="col-sm-12 col-md-2 col-lg-4">
-          <img src="images/molde-frog.jpg" alt="molde-frog">
-          <h2>Molde de rana</h2>
-          <a href="detalle-producto.php?id=2"><span>Detalles</span></a>
-          </div>
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        </div>
-        <div class="row" id="content-product">
-          <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="images/cucharon-dino.jpg" alt="cucharon">
-          <h2>Cucharon de dinosaurio</h2>
-          <a href="detalle-producto.php?id=3"><span>Detalles</span></a>
-          </div>
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        </div>
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        <div class="row" id="content-product">
-          <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="images/rociador-limon.jpg" alt="rociador">
-          <h2>Rociador de limón</h2>
-          <a href="detalle-producto.php?id=4"><span>Detalles</span></a>
-          </div>
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        </div>
-        <div class="row" id="content-product">
-          <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="images/esparcidor-unicornio.jpg" alt="unicornio">
-          <h2>Esparcidor de confites</h2>
-          <a href="detalle-producto.php?id=5"><span>Detalles</span></a>
-          </div>
+            <div class="card" style="width: 18rem;">
+              <img src=<?= $pdtos[1]['imagen'] ?> class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><?= $pdtos[1]['nombre'] ?></h5>
+                <a href="detalle-producto.php?id=1" id="details" class="btn btn-outline-success">Detalles</a>
+              </div>
+            </div>
 
-        </div>
-        <div class="row" id="content-product">
-          <div class="col-sm-1 col-md-2 col-lg-4">
-          <img src="images/molde-huevo.jpg" alt="molde">
-          <h2>Molde de corazón</h2>
-          <a href="detalle-producto.php?id=6"><span>Detalles</span></a>
-          </div>
 
-        </div>
+
 
       </div>
 
@@ -148,7 +154,7 @@
 
         </div>
 
-      </div>
+      </div> -->
       <nav class="social-links">
   			<ul>
   			</ul>
