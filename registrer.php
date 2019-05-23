@@ -77,8 +77,46 @@ if ($_POST) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Llamada a bootstrap y relacionados -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <!-- JS -->
+		<!-- Voy a darle funcionalidad al boton para ver la password -->
+		<!-- <script>
+			$(document).on('ready', function() {
+				$('#show-hide-password').on('click', function(e) {
+					e.preventDefault();
+					var current = $(this).attr('action');
+					if (current = 'hide') {
+							$(this).prev.attr('type','text');
+					}
+
+					if (current = 'show') {
+							$(this).prev.attr('type','password');
+					}
+
+				})
+			})
+		</script> -->
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+		$(document).on('ready', function() {
+			$('#show-hide-passwd').on('click', function(e) {
+				e.preventDefault();
+				var current = $(this).attr('action');
+				if (current == 'hide') {
+					$(this).prev().attr('type','text');
+					$(this).removeClass('fa fa-check-square').addClass('fa fa-check').attr('action','show');
+				}
+				if (current == 'show') {
+					$(this).prev().attr('type','password');
+					$(this).removeClass('fa fa-check').addClass('fa fa-check-square').attr('action','hide');
+				}
+			})
+		})
+	</script>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Google fonts -->
@@ -125,13 +163,16 @@ if ($_POST) {
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
                                             <input type="text" name="username" value="<?= $username; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInRegister['username']) ? 'is-invalid' : null ?>" id="username-form">
-                                            <div class="invalid-feedback">
+																						<div class="invalid-feedback">
           				                                <?= isset($errorsInRegister['username']) ? $errorsInRegister['username'] : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
                                             <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInRegister['password']) ? 'is-invalid' : null ?>" id="password-form">
-                                            <div class="invalid-feedback">
+																						<!-- <span id="show-hide-passwd" action="hide" class="input-group-addon glyphicon glyphicon glyphicon-eye-open"></span> -->
+																						<i id="show-hide-passwd" action="hide" class="fa fa-check-square" aria-hidden="true"></i>
+																						<!-- <button id="show-hide-passwd" action="hide" class="input-group-addon glyphicon glyphicon glyphicon-eye-open" type="button" name="button">Ver</button> -->
+																						<div class="invalid-feedback">
           				                                <?= isset($errorsInRegister['password']) ? $errorsInRegister['password'] : null; ?>
         				                            </div>
                                       </div>
