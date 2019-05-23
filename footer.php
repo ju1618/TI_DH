@@ -1,5 +1,6 @@
 <footer class="container mx-auto st-footer col-12">
 
+
   <div class="redes d-flex justify-content-center">
       <div class="mis-redes-sociales align-self-center">
         <br>
@@ -22,9 +23,14 @@
     <div class="lista-de-secciones ">
       <ol>
         <li> <a href="index.php">Home</a> </li>
-        <li> <a href="login.php">Ingresar</a> </li>
-        <li> <a href="registrer.php">Registrarse</a> </li>
-        <li> <a href="faqs.php">Preguntas Frecuentes</a> </li>
+        <?php if (!isLogged()) { ?>
+          <li> <a href="login.php">Ingresar</a> </li>
+          <li> <a href="registrer.php">Registrarse</a> </li>
+        <?php }else {?>
+          <li> <a href="perfilusuario.php">Perfil</a> </li>
+          <li> <a href="logout.php">Cerrar Sesión</a> </li>
+        <?php }?>
+        <li> <a href="faqs.php">FAQ</a> </li>
       </ol>
     </div>
     <div class="contacto"> <!-- /*centrar*/  -->
@@ -32,10 +38,13 @@
       telefono: 555-5555 <br>
     </div>
 
-    <div class="mapa">
+    <div class="mapa d-none d-md-block float-right">
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3309494247733!2d-58.38378388528777!3d-34.621076080455005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0xb791570f7236c962!2sDigital+House!5e0!3m2!1ses-419!2sar!4v1558375291423!5m2!1ses-419!2sar" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3309494247733!2d-58.38378388528777!3d-34.621076080455005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ea8781cb%3A0xb791570f7236c962!2sDigital+House!5e0!3m2!1ses-419!2sar!4v1558375291423!5m2!1ses-419!2sar" width="450" height="120" frameborder="0" style="border:0" allowfullscreen></iframe>
 
+    </div>
+    <div class="linkAlMapa d-block d-sm-block d-md-none">
+      <a href="https://goo.gl/maps/XJPizahVCrWxmr8i8">Ir al mapa</a>
     </div>
   </div>
   <hr>

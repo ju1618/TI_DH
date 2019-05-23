@@ -1,6 +1,6 @@
 <!-- PROBAR CON ESTO https://getbootstrap.com/docs/4.3/components/collapse/ -->
 <!-- probar hacer un foreach para mostrar las preguntas y respuestas y tener un array con preguntas y respuesas en otro archivo -->
-<?php  $nombreDeSeccion = "Preguntas Frecuentes" ?>
+<?php  $pageTitle = "Preguntas Frecuentes" ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 
@@ -29,7 +29,7 @@
         Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá. </a></strong>
         La única información que te vamos a pedir es una cuenta de correo electrónico válida y que elijas una contraseña.
         Luego de ingresar la información, te vamos a enviar un correo con un enlace para que puedas activar tu cuenta.
-        Si necesitas ayuda con alguno de los pasos, contactanos.
+        Si necesitas ayuda con alguno de los pasos,  <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactanos</strong></a>.
       </div>
     </div>
   </div>
@@ -50,7 +50,22 @@
           <li>En el campo "Contraseña" hacé clic en "Cambiar".</li>
           <li>Ingresá y confirmá tu nueva contraseña, hacé clic en "Enviar" y ¡Listo!.</li>
         </ol>
-        <br>Si luego de realizar todos los pasos, no pudiste cambiar tu contraseña, por favor contactate con nuestro equipo de Soporte.
+        <br>Si luego de realizar todos los pasos, no pudiste cambiar tu contraseña, por favor  <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactanos</strong></a> con nuestro equipo de Soporte.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header faq-pregunta-contenedor" id="headingNoRecibiConfirm">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed faq-pregunta" type="button" data-toggle="collapse" data-target="#noRecibiConfirm" aria-expanded="false" aria-controls="collapseNoRecibiConfirm">
+          <h5>No recibí el mail de confirmación</h5>
+        </button>
+      </h2>
+    </div>
+    <div id="noRecibiConfirm" class="collapse" aria-labelledby="headingNoRecibiConfirm" data-parent="#sesion">
+      <div class="card-body faq-respuesta">
+        Por favor, revisá tu casilla de spam o correo no deseado.
+        Si comprobás que aún no lo recibiste, por favor <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactanos</strong></a> para verificar lo sucedido.
       </div>
     </div>
   </div>
@@ -70,7 +85,7 @@
       <div class="card-body faq-respuesta">
         Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
-        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.
+        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.<br>
         <strong>Pasos para publicar tu anuncio:</strong>
         <ol>
           <li>Seleccioná "Ingresar" en el menú de navegación, en el margen superior, y completá los campos con tu mail y contraseña.</li>

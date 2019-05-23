@@ -1,26 +1,41 @@
+<?php
+
+require_once 'register-login-controller.php';
+
+	// Si no estÃ¡ logueda la persona la redirijo al login
+	if ( !isLogged() ) {
+		header('location: login.php');
+		exit;
+	}
+
+	$pageTitle = 'Profile';
+
+
+	$theUser = $_SESSION['userLoged'];
+
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi perfil</title>
     <!--Vinculción externa de CSS-->
+  <?php   require_once 'head.php' ?>
 <link rel="stylesheet" href="css/perfilstyles.css">
-<link rel="stylesheet" href="css/navstyle.css">
-    <!--Bootstrap CDN-->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+</head>
   <body>
       <?php require_once('nav-bar.php'); ?>
+      <ul class="navbar-nav ml-auto" style="display: flex; align-items: center;">
+				<!-- Preguntamos si NO está logueado el usuario para mostrar los enlaces Register y Login -->
+									<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+							</ul>
     <div class="contenedorprincipal">
        <div class="contenedor1">
           <br>
-          <center><img class="fotousuario" src="images/imagen.png" alt="foto del usuario"></center>
+          <center><img class="fotousuario" src="data/avatars/<?= $theUser['avatar']; ?>" alt="foto del usuario"></center>
           <br>
           <br>
                 <h1><center>Mi Perfil</center></h1>
                 <br>
-            <h2>Hola, Tomás!!!</h2>
+                <h2>Hola <?= $theUser['name']; ?></h2>
           <br>
           <br>
           <a class="item" href="#MisDatos">Mis Datos</a>
@@ -38,13 +53,14 @@
           <br>
           <h2 id = "MisDatos"><em><strong><center>Mis datos</center></strong></em></li></h2>
           <br>
-          <p><strong>Nombre y Apellido:</strong> Tomás Gomez</p>
+          <p><strong>Usuario: </strong><?= $theUser[ 'username']; ?></p>
           <br>
-          <p><strong>Dirección:</strong> Av. Rivadavia 4000</p>
+          <p><strong>Nombre: </strong><?= $theUser[ 'name']; ?></p>
           <br>
-          <p><strong>Ciudad:</strong> Capital Federal</p>
+          <p><strong>Pais: </strong><?= $theUser[ 'country']; ?></p>
           <br>
-          <p><strong>Provincia:</strong> Buenos Aires</p>
+          <p><strong>Email: </strong><?= $theUser[ 'email']; ?></p>
+          <br>
           <br>
       </div>
       <div class="contenedor3">
@@ -62,6 +78,7 @@
          <br>
          <h2 id="facturas"><em><strong><center>Facturación</center></strong></em></li></h2>
          <img class="facturadecompra" src="images/facturamp.png" alt="factura de compra">
+          <a href="facturamp.php">Factura de compra</a>.
       </div>
       <div class="contenedor5">
          <br>
@@ -76,6 +93,7 @@
          <a class="dropdown-item" href="logout.php">Salir</a>
       </div>
    </div>
+
    <?php require_once('footer.php'); ?>
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

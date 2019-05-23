@@ -10,18 +10,18 @@
 	}
 
 //Paises del select
-$countries = [
-		'ar' => 'Argentina',
-		'bo' => 'Bolivia',
-		'br' => 'Brasil',
-		'co' => 'Colombia',
-		'cl' => 'Chile',
-		'ec' => 'Ecuador',
-		'pa' => 'Paraguay',
-		'pe' => 'Perú',
-		'uy' => 'Uruguay',
-		've' => 'Venezuela',
-	];
+ $countries = [
+ 		'ar' => 'Argentina',
+ 		'bo' => 'Bolivia',
+ 		'br' => 'Brasil',
+ 		'co' => 'Colombia',
+ 		'cl' => 'Chile',
+ 		'ec' => 'Ecuador',
+ 		'pa' => 'Paraguay',
+ 		'pe' => 'Perú',
+ 		'uy' => 'Uruguay',
+ 		've' => 'Venezuela',
+ 	];
 
 // Si entra por GET va a dar error, entonces creo la variable
 $errorsInRegister = [];
@@ -85,14 +85,14 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
     <link rel="stylesheet" href="css/styles-registro.css">
-		<script>
+		<!-- <script>
 			fetch('https://restcountries.eu/rest/v2/all');
 			.then((respuesta)=> {
-				return.respuesta.json;
-			}) then((respuesta)=> {
+				return respuesta.json();
+			}) .then((respuesta)=> {
 				document.getElementById('country').value = respuesta.name;
-			}) ;
-		</script>
+			})
+		</script> -->
   </head>
   <body>
       <div class="mi-contenedor">
@@ -162,6 +162,7 @@ if ($_POST) {
                                       <div class="form-group">
                                         <label><b>País de nacimiento:</b></label>
 								                                <select
+
 									                                       name="country"
 									                                       class="form-control <?= isset($errorsInRegister['country']) ? 'is-invalid' : null; ?>"
 								                                >
@@ -173,7 +174,7 @@ if ($_POST) {
 										                            >
 											                          <?= $country ?>
 										                            </option>
-									                              <?php endforeach; ?>
+									                              <?php endforeach; ?> -->
 								                                </select>
 								                                <div class="invalid-feedback">
           				                              <?= isset($errorsInRegister['country']) ? $errorsInRegister['country'] : null; ?>
