@@ -19,7 +19,7 @@ El proyecto consiste en un e-Market, donde cada usuario postea en la pagina los 
 Se utilizó como base las clases de bootstrap, combinado con las hojas de estilo propias.
 [Bootstrap](https://getbootstrap.com/) 
 
-## Nav-Bar
+## Nav-Bar y Footer
 
 Las opciones que se muestran depende si está logueado o no el usuario.
 
