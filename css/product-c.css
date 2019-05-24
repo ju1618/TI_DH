@@ -1,6 +1,21 @@
 body{
    background-color: white;
 }
+@media (min-width:768px) {
+/* .carousel-item{
+  ;
+} */
+.card-deck .product-X{
+  display: flex;
+  flex-direction: row !important;
+  height: 328px;
+}
+.card {
+  margin: 0px 5px;
+  width: 15px;
+}
+}
+
 #carouselExampleInterval {
   margin: 5px 10px;
   /* border: solid 5px red; */
@@ -53,4 +68,7 @@ body{
   /* border: solid 5px red; */
   position: relative;
   padding-top: 60px;
+}
+.container{
+  margin-top: 50px;
 }

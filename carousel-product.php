@@ -17,7 +17,7 @@ require_once "productos.php";
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-12">
+        <div class="col-sm-12 col-md-12 col-lg-12">
           <div id="carouselExampleInterval" class="carousel slide carousel-product" data-ride="carousel">
             <h3 class="title-product" id="cocina">Cocina</h3>
             <div class="carousel-inner">
@@ -69,7 +69,7 @@ require_once "productos.php";
                 <!-- </div> -->
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                  <div class="card-deck">
+                  <div class="card-deck product-X">
                       <div class="card" style="width: 18rem;">
                         <img src=<?= $pdtos[4]['imagen'] ?> class="card-img-top" alt="...">
                         <div class="card-body">
