@@ -126,6 +126,9 @@
 // 		echo "</pre>";
 // 		exit;
 // 	}
+
+$pageTitle = 'Cambio De Contraseña';
+
 // ?>
 
 <!DOCTYPE html>
@@ -155,28 +158,30 @@
 	<link rel="stylesheet" href="css/perfilstyles.css">
   </head>
   <body>
-		<center>
-		<div class="formularioDeContraseña">
-    <form class="" action="index.php" method="post" enctype="multipart/form-data">
-      <br>
-      <br>
-      Usuario:  <input type="text" name="username" value="">
-      <br>
-      <br>
-      Contraseña actual:  <input type="password" name="password" value="">
-      <br>
-      <br>
-      Contraseña nueva:  <input type="password" name="newPassword" value="">
-      <br>
-      <br>
-      Repetir Contraseña nueva:  <input type="password" name="newRePassword" value="">
-      <br><br>
-      <button type="submit"><center>Enviar</center></button>
-      <br>
-      <br>
-      <a class=" btn btn-primary mi-boton" href="perfilusuario.php"> <center>Volver</center></a>
-    </form>
-  </div>
+	  	<center>
+		  <div class="formularioDeContraseña">
+       <form class="" action="index.php" method="post" enctype="multipart/form-data">
+       <br>
+       <br>
+       Usuario:  <input type="text" name="username" value="" placeholder="Ingresa tu usuario...">
+       <br>
+       <br>
+       Contraseña actual:  <input type="password" name="password" value="" placeholder="Ingresa tu contraseña...">
+       <br>
+       <br>
+       Contraseña nueva:  <input type="password" name="newPassword" value="" placeholder="Ingresa tu nueva contraseña...">
+       <br>
+       <br>
+       Repetir Contraseña nueva:  <input type="password" name="newRePassword" value="" placeholder="Confirma tu nueva contraseña...">
+       <br>
+			 <br>
+			 <br>
+       <button type="submit" value="enviar"><center>Enviar</center></button>
+       <br>
+       <br>
+       <a class=" btn btn-primary mi-boton" href="perfilusuario.php"> <center>Volver</center></a>
+     </form>
+    </div>
 	</center>
  </body>
 </html>

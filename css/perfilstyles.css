@@ -43,6 +43,10 @@ img{
  height: auto;
 }
 
+.img {
+  width: 100%;
+}
+
 .productocomprado {
   width: 10%;
   height: auto;
@@ -135,9 +139,13 @@ img{
   -moz-border-radius: 10px 10px;
   -webkit-border-radius: 10px 10px;
   border-radius: 10px 10px;
-  width: 500px;
+  width: 700px;
   align-self: center;
   align-content: space-between;
+}
+
+input[type="text"], input[type="password"] {
+  width: 400px;
 }
 
 @media screen and (max-width: 400px) {
