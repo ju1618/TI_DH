@@ -134,26 +134,49 @@
   <head>
     <meta charset="utf-8">
     <title>Cambiar contraseña</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+		$(document).on('ready', function() {
+			$('#show-hide-passwd').on('click', function(e) {
+				e.preventDefault();
+				var current = $(this).attr('action');
+				if (current == 'hide') {
+					$(this).prev().attr('type','text');
+					$(this).removeClass('fa fa-check-square').addClass('fa fa-check').attr('action','show');
+				}
+				if (current == 'show') {
+					$(this).prev().attr('type','password');
+					$(this).removeClass('fa fa-check').addClass('fa fa-check-square').attr('action','hide');
+				}
+			})
+		})
+	</script>
+
+	<link rel="stylesheet" href="css/perfilstyles.css">
   </head>
   <body>
-    <form class="" action="index.html" method="post" enctype="multipart/form-data">
+		<center>
+		<div class="formularioDeContraseña">
+    <form class="" action="index.php" method="post" enctype="multipart/form-data">
       <br>
       <br>
-      Usuario:<input type="text" name="username" value="">
+      Usuario:  <input type="text" name="username" value="">
       <br>
       <br>
-      Contraseña actual:<input type="password" name="password" value="">
+      Contraseña actual:  <input type="password" name="password" value="">
       <br>
       <br>
-      Contraseña nueva:<input type="password" name="newPassword" value="">
+      Contraseña nueva:  <input type="password" name="newPassword" value="">
       <br>
       <br>
-      Repetir Contraseña nueva:<input type="password" name="newRePassword" value="">
+      Repetir Contraseña nueva:  <input type="password" name="newRePassword" value="">
       <br><br>
-      <button type="submit">Enviar</button>
+      <button type="submit"><center>Enviar</center></button>
       <br>
       <br>
-      <a class=" btn btn-primary mi-boton" href="perfilusuario.php">  Volver</a>
+      <a class=" btn btn-primary mi-boton" href="perfilusuario.php"> <center>Volver</center></a>
     </form>
-  </body>
+  </div>
+	</center>
+ </body>
 </html>
