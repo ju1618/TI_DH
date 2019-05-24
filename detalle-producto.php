@@ -3,7 +3,6 @@
 
   // llamo a mi array de productos
   require_once 'productos.php';
-
   $error='';
 
   // logica para asignar al producto seleccionado por lo que viene por GET
@@ -68,5 +67,7 @@
                 </div>
 
   </body>
-    <?php require_once('footer.php'); ?>
+    <?php
+    require_once('footer.php'); 
+    ?>
 </html>
