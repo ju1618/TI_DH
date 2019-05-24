@@ -62,6 +62,23 @@
     <link rel="stylesheet" href="css/styles-login.css">
     <!-- Y normalizo -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script>
+		$(document).on('ready', function() {
+			$('#show-hide-passwd').on('click', function(e) {
+				e.preventDefault();
+				var current = $(this).attr('action');
+				if (current == 'hide') {
+					$(this).prev().attr('type','text');
+					$(this).removeClass('fas fa-eye-slash').addClass('fas fa-eye').attr('action','show');
+				}
+				if (current == 'show') {
+					$(this).prev().attr('type','password');
+					$(this).removeClass('fas fa-eye').addClass('fas fa-eye-slash').attr('action','hide');
+				}
+			})
+		})
+	</script>
   </head>
   <body>
       <div class="mi-contenedor">
@@ -99,7 +116,8 @@
                                       </div>
                                       <div class="form-group">
                                             <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInLogin['password']) ? 'is-invalid' : null ?>" id="password-form">
-                                            <div class="invalid-feedback">
+																						<i id="show-hide-passwd" action="hide" class="fas fa-eye-slash mi-check" aria-hidden="true"></i>
+																						<div class="invalid-feedback">
           				                                <?= isset($errorsInLogin['password']) ? $errorsInLogin['password'] : null; ?>
         				                            </div>
                                       </div>
