@@ -87,7 +87,7 @@ require_once 'register-login-controller.php';
          <a href="#reset">Reestablecer contraseña</a>
          <br>
          <br>
-         <a href="#cambiarpass">Cambiar contraseña</a>
+         <a href="cambiar_contrasenia.php">Cambiar contraseña</a>
          <br>
          <br>
          <a class="dropdown-item" href="logout.php">Salir</a>
