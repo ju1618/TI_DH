@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	// Incluimos el controlador del registro-login
 	// De esta manera tengo el scope a la funciones que necesito
 	require_once 'register-login-controller.php';
@@ -129,10 +129,10 @@
         </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
-                <li class="list-inline-item"><a class="" target="_blank" href="index-proyecto.php"><i class="fas fa-home"></i></a></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="faqs.php"><i class="fas fa-question"></i></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
+                <li class="list-inline-item"><a class="" href="index.php"><i class="fas fa-home"></i></a></li>
+                <li class="list-inline-item"><a class="" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
+                <li class="list-inline-item"><a class="" href="faqs.php"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" href="#"><i class="fas fa-headset"></i></li>
             </ul>
           </div>
       <!-- </div> -->

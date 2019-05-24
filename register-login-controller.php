@@ -98,9 +98,9 @@
 					$ext = pathinfo($avatar['name'], PATHINFO_EXTENSION);
 
 				// 	// Si la extesión del archivo que cargaron NO está en mi array de formatos permitidos
-				  // if ( !in_array($ext, ALLOWED_IMAGE_FORMATS) ) {
-				  // 		$errors['avatar'] = 'Los formatos permitidos son JPG, PNG y GIF';
-					// }
+				  if ( ($ext != 'JPG') && ($ext != 'PNG') && ($ext != 'GIF')) {
+				  		$errors['avatar'] = 'Los formatos permitidos son JPG, PNG y GIF';
+					}
 				 }
 
 

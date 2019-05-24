@@ -77,25 +77,7 @@ if ($_POST) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Llamada a bootstrap y relacionados -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <!-- JS -->
-		<!-- Voy a darle funcionalidad al boton para ver la password -->
-		<!-- <script>
-			$(document).on('ready', function() {
-				$('#show-hide-password').on('click', function(e) {
-					e.preventDefault();
-					var current = $(this).attr('action');
-					if (current = 'hide') {
-							$(this).prev.attr('type','text');
-					}
 
-					if (current = 'show') {
-							$(this).prev.attr('type','password');
-					}
-
-				})
-			})
-		</script> -->
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script>
@@ -105,15 +87,32 @@ if ($_POST) {
 				var current = $(this).attr('action');
 				if (current == 'hide') {
 					$(this).prev().attr('type','text');
-					$(this).removeClass('fa fa-check-square').addClass('fa fa-check').attr('action','show');
+					$(this).removeClass('fas fa-eye-slash').addClass('fas fa-eye').attr('action','show');
 				}
 				if (current == 'show') {
 					$(this).prev().attr('type','password');
-					$(this).removeClass('fa fa-check').addClass('fa fa-check-square').attr('action','hide');
+					$(this).removeClass('fas fa-eye').addClass('fas fa-eye-slash').attr('action','hide');
 				}
 			})
 		})
 	</script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+	$(document).on('ready', function() {
+		$('#show-hide-repasswd').on('click', function(e) {
+			e.preventDefault();
+			var current = $(this).attr('action');
+			if (current == 'hide') {
+				$(this).prev().attr('type','text');
+				$(this).removeClass('fas fa-eye-slash').addClass('fas fa-eye').attr('action','show');
+			}
+			if (current == 'show') {
+				$(this).prev().attr('type','password');
+				$(this).removeClass('fas fa-eye').addClass('fas fa-eye-slash').attr('action','hide');
+			}
+		})
+	})
+</script>
 
 
 
@@ -123,14 +122,8 @@ if ($_POST) {
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet">
     <!-- Enlazo mi hoja de estilo -->
     <link rel="stylesheet" href="css/styles-registro.css">
-		<!-- <script>
-			fetch('https://restcountries.eu/rest/v2/all');
-			.then((respuesta)=> {
-				return respuesta.json();
-			}) .then((respuesta)=> {
-				document.getElementById('country').value = respuesta.name;
-			})
-		</script> -->
+		<link rel="stylesheet" href="css/styles-footer.css">
+
   </head>
   <body>
       <div class="mi-contenedor">
@@ -169,16 +162,15 @@ if ($_POST) {
                                       </div>
                                       <div class="form-group">
                                             <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInRegister['password']) ? 'is-invalid' : null ?>" id="password-form">
-																						<!-- <span id="show-hide-passwd" action="hide" class="input-group-addon glyphicon glyphicon glyphicon-eye-open"></span> -->
-																						<i id="show-hide-passwd" action="hide" class="fa fa-check-square" aria-hidden="true"></i>
-																						<!-- <button id="show-hide-passwd" action="hide" class="input-group-addon glyphicon glyphicon glyphicon-eye-open" type="button" name="button">Ver</button> -->
+																						<i id="show-hide-passwd" action="hide" class="fas fa-eye-slash mi-check" aria-hidden="true"></i>
 																						<div class="invalid-feedback">
           				                                <?= isset($errorsInRegister['password']) ? $errorsInRegister['password'] : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
                                             <input type="password" name="rePassword" value="" placeholder="Repite tu password..." class="form-control <?= isset($errorsInRegister['rePassword']) ? 'is-invalid' : null ?>" id="password-form">
-                                            <div class="invalid-feedback">
+																						<i id="show-hide-repasswd" action="hide" class="fas fa-eye-slash mi-check" aria-hidden="true"></i>
+																						<div class="invalid-feedback">
           				                                <?= isset($errorsInRegister['rePassword']) ? $errorsInRegister['rePassword'] : null; ?>
         				                            </div>
                                       </div>
@@ -241,7 +233,7 @@ if ($_POST) {
                             </div>
                       </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-12 mis-redes-sociales">
                           <p>También estamos en las redes!</p>
                           <div class="mis-botones-redes">
@@ -256,19 +248,19 @@ if ($_POST) {
                             </a>
                           </div>
                       </div>
-                </div>
+                </div> -->
                </div>
-		             <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
+		             <!-- <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer> -->
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
-                <li class="list-inline-item"><a class="" target="_blank" href="index-proyecto.php"><i class="fas fa-home"></i></a></li>
-                <!-- <li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li> -->
-                <li class="list-inline-item"><a class="" target="_blank" href="faqs.php"><i class="fas fa-question"></i></li>
-                <li class="list-inline-item"><a class="" target="_blank" href="#"><i class="fas fa-headset"></i></li>
-		<li class="list-inline-item"><a class="" target="_blank" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
+                <li class="list-inline-item"><a class="" href="index.php"><i class="fas fa-home"></i></a></li>
+                <li class="list-inline-item"><a class="" href="faqs.php"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" href="#"><i class="fas fa-headset"></i></li>
+								<li class="list-inline-item"><a class="" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
             </ul>
           </div>
       </div>
   </body>
+	<?php require_once('footer.php'); ?>
 </html>

@@ -179,8 +179,8 @@ textarea.form-control:focus {
 }
 
 .list-inline li {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   font-size: 100%;
   overflow: hidden;
 }
@@ -214,4 +214,17 @@ textarea.form-control:focus {
 
 .invalid-feedback  {
   color: white;
+}
+
+.show-hide-passwd {
+  margin-top: 5px;
+}
+
+
+.show-hide-repasswd {
+  margin-top: 5px;
+}
+
+.mi-check {
+  padding-top: 9px;
 }
