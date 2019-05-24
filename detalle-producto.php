@@ -1,5 +1,5 @@
 <?php
-  $nombreDeSeccion = "Detalle de producto";
+  $pageTitle = "Detalle de producto";
 
   // llamo a mi array de productos
   require_once 'productos.php';
@@ -56,6 +56,10 @@
                                         echo $error;
                                  endif; ?>
                                 <?php echo $elegido["descripcion"] ?>
+                              </div>
+                              <div class="text-left">
+                                <hr>
+                                <h5>Publicado por: <?= $elegido["publicadoPor"] ?></h5>
                               </div>
                               <!--          botón voler          -->
                               <a class=" btn btn-primary mi-boton" href="index.php">Volver</a>

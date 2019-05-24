@@ -11,6 +11,7 @@
     padding: 10px;
     padding-left: 3%;
     padding-right: 3%;
+    height: auto;
     }
 
   .mi-boton-redsocial {
@@ -45,4 +46,8 @@
     padding-left: 2%;
     padding-right: 0;
     margin-right: 0;
+  }
+
+  .menu-maps, .contacto, .lista-de-secciones{
+    margin-top: 10px;
   }
