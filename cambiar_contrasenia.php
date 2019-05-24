@@ -145,10 +145,10 @@
       Contraseña actual:<input type="password" name="password" value="">
       <br>
       <br>
-      Contraseña nueva:<input type="newPassword" name="newPassword" value="">
+      Contraseña nueva:<input type="password" name="newPassword" value="">
       <br>
       <br>
-      Repetir Contraseña nueva:<input type="newRePassword" name="newRePassword" value="">
+      Repetir Contraseña nueva:<input type="password" name="newRePassword" value="">
       <br><br>
       <button type="submit">Enviar</button>
       <br>
