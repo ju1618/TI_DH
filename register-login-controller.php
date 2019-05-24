@@ -71,7 +71,7 @@
 		} elseif (!validpassword_longitud($password)) {
 			$errors['password'] = 'La contraseña debe tener más de 5 caracteres';
 		} elseif (validpassword_DH($password)!= true) {
-			$errors['password'] = 'La password debe contener una D y H mayuscula';
+			$errors['password'] = 'La password debe contener una D y H mayusculas seguidas';
 		} elseif (validpassword_blancos($password) == true) {
 			echo 'entro a error';
 			$errors['password'] = 'La password no puede contener espacios en blanco';
@@ -309,9 +309,10 @@
 
 	 //Si la password tiene D y H mayusculas
 	 function validpassword_DH($cadenapassword) {
-		 $posD = strrpos($cadenapassword, 'D');
-		 $posH = strrpos($cadenapassword, 'H');
-		 if (($posD === false) || ($posH === false)) { // nota: tres signos de igual
+		 $posD = strrpos($cadenapassword, 'DH');
+		//  $posH = strrpos($cadenapassword, 'H');
+		//  if (($posD === false) || ($posH === false)) { // nota: tres signos de igual
+		  if ($posD === false) {
     	return false;
 		} else {
 			return true;
@@ -357,24 +358,6 @@
 	}
 
 
-	// Función para traer a 1 usuario por name
-	/*
-		Recibe como parámetro el email que quiero buscar
-	*/
-	// function getUserByName($email){
-	// 	// Obtengo a todos los usuarios
-	// 	$allUsers = getAllUsers();
-	//
-	// 	// Recorro el array de usuarios
-	// 	foreach ($allUsers as $oneUser) {
-	// 		// Si la posición email del usuario de esa iteración es igual al email que me pasan por parámetro
-	// 		if ($oneUser['name'] == $email) {
-	// 			// Retorno al usuario encontrado
-	// 			var_dump($oneUser);
-	// 			return $oneUser;
-	// 		}
-	// 	}
-	// }
 
 	// Función para hacer debug
 	/*
