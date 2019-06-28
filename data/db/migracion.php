@@ -1,6 +1,8 @@
 <?php
 
+require_once 'conection.php';
 //conexion con la DB
+
 
 $statement = $conection->prepare('SELECT * FROM users');
 

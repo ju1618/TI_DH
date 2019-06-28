@@ -3,6 +3,8 @@
 // Incluimos el controlador del registro-login
 	require_once 'register-login-controller.php';
 
+	require_once 'conection.php';
+
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
 		header('location: perfilusuario.php');
