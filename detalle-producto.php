@@ -26,8 +26,9 @@
   </head>
 
   <body>
-      <div class="contenedor-detalle">
-          <div class="container-detalle">
+    <?php require_once('nav-bar.php'); ?>
+
+          <!-- <div class="container-detalle">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
                         <a class= "nav-link" href="index.php"><h1 class="marca-detalle"><img src="images/logo.png" height="45px" width="55px" alt="logo"><strong>  market palace</strong></h1></a>
@@ -35,8 +36,10 @@
                           <p>Un lugar donde encontrás todo lo que querés</p>
                         </div>
                     </div>
-                </div>
-                <!-- Aca va a ir el contenedor del detalle -->
+                </div> -->
+
+                <!-- contenedor del detalle -->
+                <div class="contenedor-detalle">
                 <div class="row">
                       <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 mi-detalle-contenedor">
                             <!-- Como si fuera el 'header' del detalle -->
@@ -65,9 +68,8 @@
                           </div>
                       </div>
                 </div>
+                </div>
 
   </body>
-    <?php
-    require_once('footer.php');
-    ?>
+    <?php  require_once('footer.php');  ?>
 </html>
