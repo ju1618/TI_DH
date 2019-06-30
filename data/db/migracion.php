@@ -18,9 +18,9 @@ if (!users) {
   foreach ($userFromJSON as $oneUser) {
     // inserto cada usuario del JSON en la DB sql
     //en cada uno de los casilleros de la DB en el orden que los tengo guardados
-    $statement2 = $conection->prepare("INSERT INTO users('username', 'name', 'lastname','email', 'country', 'avatar')")
+    $statement2 = $conection->prepare("INSERT INTO users('username', 'name', 'lastname','email', 'country', 'avatar')");
 
-    $statement2->execute([$oneUser['username'],$oneUser['name'],$oneUser['lastname'],$oneUser['email'],$oneUser['country'],$oneUser['avatar']])
+    $statement2->execute([$oneUser['username'],$oneUser['name'],$oneUser['lastname'],$oneUser['email'],$oneUser['country'],$oneUser['avatar']]);
   }
 }
 

@@ -3,13 +3,19 @@
 // Incluimos el controlador del registro-login
 	require_once 'register-login-controller.php';
 
-	require_once 'conection.php';
+	require_once 'data/db/conection.php';
+	// require_once 'data/db/migracion.php';
 
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
 		header('location: perfilusuario.php');
 		exit;
 	}
+
+
+
+	require_once 'data/db/save.php';
+
 
 //Paises del select
  $countries = [
@@ -28,11 +34,15 @@
 // Si entra por GET va a dar error, entonces creo la variable
 $errorsInRegister = [];
 // Voy a persitir lo siguiente
+$id='';
 $username = '';
 $name = '';
 $lastname = '';
 $email = '';
 $countryFromPost = '';
+
+
+
 
 //Si es post se seteó?
 if ($_POST) {
@@ -42,6 +52,7 @@ if ($_POST) {
       $lastname = trim($_POST['lastname']);
       $email = trim($_POST['email']);
       $countryFromPost = $_POST['country'];
+			$imgAvatar=$_POST['avatar'];
 
       // funcion que nos retorna los errores que se hayan presentado
       $errorsInRegister = registerValidate();
@@ -53,7 +64,7 @@ if ($_POST) {
       			$imgName = saveImage();
             // //
       			// // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
-      			$_POST['avatar'] = $imgName;
+      			$imgAvatar = $imgName;
 
       			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
       			$theUser = saveUser();
@@ -155,6 +166,10 @@ if ($_POST) {
                             </div>
                             <div class="mi-principal-form">
                                   <form role="form" class="" action="" method="post" enctype="multipart/form-data">
+
+
+																			<!-- <input type="hidden" name="id" value="<?php echo $oneUser['id'] ?>"> -->
+
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
                                             <input type="text" name="username" value="<?= $username; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInRegister['username']) ? 'is-invalid' : null ?>" id="username-form">
