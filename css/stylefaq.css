@@ -35,6 +35,8 @@ img{
   padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
+  background-color: rgba(75,145,214,0.11);
+  background-size:cover;
 }
 
 .faq-tema{
@@ -59,7 +61,10 @@ img{
    color: rgb(75,209,182);
  }
 
-
+.faq-respuesta{
+  color: #000;
+  text-align: left;
+}
 .faq-respuesta li{
   list-style: initial;
   margin-left: 2%;
