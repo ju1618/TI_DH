@@ -1,4 +1,5 @@
 ﻿<?php
+require_once 'data/db/conection.php';
 
 	// Inicio la sesión para tener acceso a $_SESSION en todos los archivos
 	session_start();
@@ -27,6 +28,7 @@
 		// Defino el array local de errores que voy a retornar
 		$errors = [];
 
+
 		// Definimos las variables locales que almacenan lo que nos llegó por $_POST y $_FILES
 		$username = trim($_POST['username']);
 		$name = trim($_POST['name']);
@@ -40,6 +42,7 @@
 
 
 	 // Si está vació el campo: $username
+	 // if ( empty($username) ) {
 	 if ( empty($username) ) {
 		 $errors['username'] = 'El campo username no puede estar vacío';
 	 }
@@ -166,38 +169,62 @@
 
 
 	// Función para guardar al usuario
-	function saveUser() {
-		// Trimeamos los valores que vinieron por $_POST
-		$_POST['username'] = trim($_POST['username']);
-		$_POST['name'] = trim($_POST['name']);
-		$_POST['lastname'] = trim($_POST['lastname']);
-		$_POST['email'] = trim($_POST['email']);
+	// function saveUser() {
+	// 	// Trimeamos los valores que vinieron por $_POST
+	// 	$_POST['username'] = trim($_POST['username']);
+	// 	$_POST['name'] = trim($_POST['name']);
+	// 	$_POST['lastname'] = trim($_POST['lastname']);
+	// 	$_POST['email'] = trim($_POST['email']);
+	//
+	// 	// Hasheo el password del usuario
+	// 	$_POST['password'] = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
+	//
+	// 	// Genero el ID y lo guardo en una posición de $_POST llamada "id"
+	// 	$_POST['id'] = generateID();
+	//
+	// 	// Elimino de $_POST la posición "rePassword" ya que no me interesa guardar este dato en mi DB (Data Base)
+	// 	unset($_POST['rePassword']);
+	//
+	// 	// En la variable $finalUser guardo el array de $_POST
+	// 	$finalUser = $_POST;
+	//
+	// 	// Obtengo todos los usuarios
+	// 	$allUsers = getAllUsers();
+	//
+	// 	// En la última posición del array de usuarios, inserto al usuario nuevo
+	// 	$allUsers[] = $finalUser;
+	//
+	// 	// Guardo todos los usuarios de vuelta en el JSON
+	// 	file_put_contents(USERS_JSON_PATH, json_encode($allUsers));
+	//
+	// 	// Retorno al usuario que acabo de guardar para poder tenerlo listo y loguearlo
+	// 	return $finalUser;
+	// }
 
-		// Hasheo el password del usuario
-		$_POST['password'] = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
+function saveUser() {
+	global $db;
+	$username=$_POST['username'];
+  $name=$_POST['name'];
+  $lastname=$_POST['lastname'];
+  $email=$_POST['email'];
+  $countryFromPost = $_POST['country'];
+  // $imgAvatar=$_FILES['avatar'];
+  $imgAvatar=$_POST['avatar'];
+  $pass=$_POST['password'];
 
-		// Genero el ID y lo guardo en una posición de $_POST llamada "id"
-		$_POST['id'] = generateID();
+	// $sql="INSERT INTO user  values (default, '$username', '$name', '$lastname','$email', '$countryFromPost', '$imgAvatar', '$pass')";
+  $sql="INSERT INTO user values (default, :username, :name, :lastname, :email, :countryFromPost, :imgName, :pass)";
+  $query=$db->prepare($sql);
+	$query->bindValue(':username', $username);
+  $query->bindValue(':name', $name);
+  $query->bindValue(':lastname', $lastname);
+  $query->bindValue(':email', $email);
+  $query->bindValue(':countryFromPost', $countryFromPost);
+  $query->bindValue(':imgName', $imgAvatar);
+  $query->bindValue(':pass', $pass);
 
-		// Elimino de $_POST la posición "rePassword" ya que no me interesa guardar este dato en mi DB (Data Base)
-		unset($_POST['rePassword']);
-
-		// En la variable $finalUser guardo el array de $_POST
-		$finalUser = $_POST;
-
-		// Obtengo todos los usuarios
-		$allUsers = getAllUsers();
-
-		// En la última posición del array de usuarios, inserto al usuario nuevo
-		$allUsers[] = $finalUser;
-
-		// Guardo todos los usuarios de vuelta en el JSON
-		file_put_contents(USERS_JSON_PATH, json_encode($allUsers));
-
-		// Retorno al usuario que acabo de guardar para poder tenerlo listo y loguearlo
-		return $finalUser;
-	}
-
+	$query->execute();
+}
 
 	// Función para loguear al usuario
 	/*

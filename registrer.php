@@ -14,7 +14,7 @@
 
 
 
-	require_once 'data/db/save.php';
+	// require_once 'data/db/save.php';
 
 
 //Paises del select
@@ -52,7 +52,7 @@ if ($_POST) {
       $lastname = trim($_POST['lastname']);
       $email = trim($_POST['email']);
       $countryFromPost = $_POST['country'];
-			$imgAvatar=$_POST['avatar'];
+			// $imgAvatar=$_POST['avatar'];
 
       // funcion que nos retorna los errores que se hayan presentado
       $errorsInRegister = registerValidate();
@@ -64,7 +64,8 @@ if ($_POST) {
       			$imgName = saveImage();
             // //
       			// // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
-      			$imgAvatar = $imgName;
+      			// $imgAvatar = $imgName;
+						$_POST['avatar'] = $imgName;
 
       			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
       			$theUser = saveUser();
@@ -168,7 +169,7 @@ if ($_POST) {
                                   <form role="form" class="" action="" method="post" enctype="multipart/form-data">
 
 
-																			<!-- <input type="hidden" name="id" value="<?php echo $oneUser['id'] ?>"> -->
+
 
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
