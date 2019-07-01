@@ -1,68 +1,77 @@
-<?php
+﻿<?php
+require_once 'config.php';
+require_once 'classes/Validator.php';
+require_once 'classes/RegisterValidator.php';
+require_once 'classes/SaveImage.php';
+require_once 'classes/User.php';
+require_once 'classes/DB.php';
+require_once 'classes/DBJson.php';
+require_once 'classes/Auth.php';
 
-// Incluimos el controlador del registro-login
-	require_once 'register-login-controller.php';
 
-	// Si está logueda la persona la redirijo al profile
-	if ( isLogged() ) {
+
+$DB = new DBJson('users.json');
+$Auth = new Auth($DB);
+
+// if ( $Auth->isLogged() ) {
+//       header('location:perfilusuario.php');
+// }
+if ( $Auth->isLogged() ) {
+    var_dump('Entre a isloged');
+    exit;
 		header('location: perfilusuario.php');
 		exit;
 	}
+var_dump('Segui mi camino. Voy a instanciar registrer');
 
-//Paises del select
- $countries = [
- 		'ar' => 'Argentina',
- 		'bo' => 'Bolivia',
- 		'br' => 'Brasil',
- 		'co' => 'Colombia',
- 		'cl' => 'Chile',
- 		'ec' => 'Ecuador',
- 		'pa' => 'Paraguay',
- 		'pe' => 'Perú',
- 		'uy' => 'Uruguay',
- 		've' => 'Venezuela',
- 	];
 
-// Si entra por GET va a dar error, entonces creo la variable
-$errorsInRegister = [];
-// Voy a persitir lo siguiente
-$username = '';
-$name = '';
-$lastname = '';
-$email = '';
-$countryFromPost = '';
 
+$registrerValidator = new RegisterValidator;
 //Si es post se seteó?
 if ($_POST) {
-      // Variables de persistencia , que reciben lo que viene de post
-      $username = trim($_POST['username']);
-      $name = trim($_POST['name']);
-      $lastname = trim($_POST['lastname']);
-      $email = trim($_POST['email']);
-      $countryFromPost = $_POST['country'];
+          //var_dump($DB->emailExist($_POST['email']));
+    if (!empty($_POST['email'])) {
+          if ( $DB->emailExist($_POST['email']) ) {
+              $registrerValidator->setError('email', 'Ya se registraron con ese correo electrónico');
+            }
+          }
+    if (!empty($_POST['username'])) {
+          if ( $DB->usernameExist($_POST['username']) ) {
+                $registrerValidator->setError('username', 'Ya se registraron con ese username');
+            }
+          }
+          if ($registrerValidator->isValid()) {
+          SaveImage::uploadImage($_FILES['avatar']);
+          //$_POST['avatar'] = SaveImage::$avatarName;
+          $user = new User($_POST['username'], $_POST['name'], $_POST['lastname'], $_POST['email'], $_POST['country'], SaveImage::$avatarName);
+          $user->setId($DB->generateID());
+          $user->setPassword($_POST['password']);
+          $DB->saveUser($user);
+          // Al momento en que se registan vamos a mantener la sesión abierta
+			    // setcookie('userLoged', $user->getEmail(), time() + 3000);
+			    // Logueo al usuario
+          // setcookie('userLogedEmail', $user->getEmail(), time() + 3000);
+          var_dump('Voy a loguear al tipo');
+			    $Auth->login($user);
 
-      // funcion que nos retorna los errores que se hayan presentado
-      $errorsInRegister = registerValidate();
 
-      // Si no hay errores en el registro entonces guardo la imagen y los datos
-      if ( !$errorsInRegister ) {
+      }
 
-      			// // Guardo la imagen y obtengo el nombre aleatorio creado
-      			$imgName = saveImage();
-            // //
-      			// // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
-      			$_POST['avatar'] = $imgName;
-
-      			// Guardo al usuario en el archivo JSON, y me devuelve al usuario que guardó en array
-      			$theUser = saveUser();
-
-      			// Al momento en que se registar vamos a mantener la sesión abierta
-      			setcookie('userLoged', $theUser['email'], time() + 3000);
-
-      			// Logueo al usuario
-      			login($theUser);
       		}
-      	}
+
+
+          $countries = [
+          		'ar' => 'Argentina',
+          		'bo' => 'Bolivia',
+          		'br' => 'Brasil',
+          		'co' => 'Colombia',
+          		'cl' => 'Chile',
+          		'ec' => 'Ecuador',
+          		'pa' => 'Paraguay',
+          		'pe' => 'Perú',
+          		'uy' => 'Uruguay',
+          		've' => 'Venezuela',
+          	];
 
 
  ?>
@@ -155,41 +164,42 @@ if ($_POST) {
                                   <form role="form" class="" action="" method="post" enctype="multipart/form-data">
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
-                                            <input type="text" name="username" value="<?= $username; ?>" placeholder="Ingresa tu usuario..." class="form-control <?= isset($errorsInRegister['username']) ? 'is-invalid' : null ?>" id="username-form">
-																						<div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['username']) ? $errorsInRegister['username'] : null; ?>
-        				                            </div>
+                                            <input type="text" name="username" value="<?= $registrerValidator->getUsername(); ?>" placeholder="Ingresa tu usuario..." class="form-control <?= $registrerValidator->hasError('username') ? 'is-invalid' : null ?>" id="username-form">
+
+					    <div class="invalid-feedback">
+          				                                <?= $registrerValidator->hasError('username') ? $registrerValidator->getError('username') : null; ?>
+        				    </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= isset($errorsInRegister['password']) ? 'is-invalid' : null ?>" id="password-form">
+                                            <input type="password" name="password" value="" placeholder="Ingresa tu password..." class="form-control <?= $registrerValidator->hasError('password') ? 'is-invalid' : null ?>" id="password-form">
 																						<i id="show-hide-passwd" action="hide" class="fas fa-eye-slash mi-check" aria-hidden="true"></i>
 																						<div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['password']) ? $errorsInRegister['password'] : null; ?>
+          				                                <?= $registrerValidator->hasError('password') ? $registrerValidator->getError('password') : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="password" name="rePassword" value="" placeholder="Repite tu password..." class="form-control <?= isset($errorsInRegister['rePassword']) ? 'is-invalid' : null ?>" id="password-form">
+                                            <input type="password" name="rePassword" value="" placeholder="Repite tu password..." class="form-control <?= $registrerValidator->hasError('rePassword') ? 'is-invalid' : null ?>" id="password-form">
 																						<i id="show-hide-repasswd" action="hide" class="fas fa-eye-slash mi-check" aria-hidden="true"></i>
 																						<div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['rePassword']) ? $errorsInRegister['rePassword'] : null; ?>
+          				                                <?= $registrerValidator->hasError('rePassword') ? $registrerValidator->getError('rePassword') : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="text" name="name" value="<?= $name; ?>" placeholder="Ingresa tu nombre..." class="form-control <?= isset($errorsInRegister['name']) ? 'is-invalid' : null ?>" id="name-form">
+                                            <input type="text" name="name" value="<?= $registrerValidator->getName(); ?>" placeholder="Ingresa tu nombre..." class="form-control <?= $registrerValidator->hasError('name') ? 'is-invalid' : null ?>" id="name-form">
                                             <div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['name']) ? $errorsInRegister['name'] : null; ?>
+          				                                <?= $registrerValidator->hasError('name') ? $registrerValidator->getError('name') : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="text" name="lastname" value="<?= $lastname; ?>" placeholder="Ingresa tu apellido..." class="form-control <?= isset($errorsInRegister['lastname']) ? 'is-invalid' : null ?>" id="lastname-form">
+                                            <input type="text" name="lastname" value="<?= $registrerValidator->getLastName() ?>" placeholder="Ingresa tu apellido..." class="form-control <?= $registrerValidator->hasError('lastname') ? 'is-invalid' : null ?>" id="lastname-form">
                                             <div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['lastname']) ? $errorsInRegister['lastname'] : null; ?>
+          				                                <?= $registrerValidator->hasError('lastname') ? $registrerValidator->getError('lastname') : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
-                                            <input type="text" name="email" value="<?= $email; ?>" placeholder="Ingresa tu email..." class="form-control <?= isset($errorsInRegister['email']) ? 'is-invalid' : null ?>" id="email-form">
+                                            <input type="text" name="email" value="<?= $registrerValidator->getEmail() ?>" placeholder="Ingresa tu email..." class="form-control <?= $registrerValidator->hasError('email') ? 'is-invalid' : null ?>" id="email-form">
                                             <div class="invalid-feedback">
-          				                                <?= isset($errorsInRegister['email']) ? $errorsInRegister['email'] : null; ?>
+          				                                <?= $registrerValidator->hasError('email') ? $registrerValidator->getError('email') : null; ?>
         				                            </div>
                                       </div>
                                       <div class="form-group">
@@ -197,20 +207,20 @@ if ($_POST) {
 								                                <select
 
 									                                       name="country"
-									                                       class="form-control <?= isset($errorsInRegister['country']) ? 'is-invalid' : null; ?>"
+									                                       class="form-control <?= $registrerValidator->hasError('country') ? 'is-invalid' : null; ?>"
 								                                >
 									                              <option value="">Elegí un país</option>
 									                              <?php foreach ($countries as $code => $country): ?>
 										                            <option
 											                           value="<?= $code ?>"
-											                          <?= $code == $countryFromPost ? 'selected' : null; ?>
+											                          <?= $code == $registrerValidator->getcountry('country') ? 'selected' : null; ?>
 										                            >
 											                          <?= $country ?>
 										                            </option>
 									                              <?php endforeach; ?> -->
 								                                </select>
 								                                <div class="invalid-feedback">
-          				                              <?= isset($errorsInRegister['country']) ? $errorsInRegister['country'] : null; ?>
+          				                              <?= $registrerValidator->hasError('country') ? $registrerValidator->getError('country') : null; ?>
         				                                </div>
 							                        </div>
                                       <!-- </div> -->
@@ -220,11 +230,11 @@ if ($_POST) {
 									                                           <input
 										                                                   type="file"
 									 	                                                   name="avatar"
-										                                                   class="custom-file-input <?= isset($errorsInRegister['avatar']) ? 'is-invalid' : null; ?>"
+										                                                   class="custom-file-input <?= $registrerValidator->hasError('avatar') ? 'is-invalid' : null; ?>"
 									                                           >
 									                                           <label class="custom-file-label">Choose file...</label>
 									                                 <div class="invalid-feedback">
-	          				                                    <?= isset($errorsInRegister['avatar']) ? $errorsInRegister['avatar'] : null; ?>
+	          				                                    <?= $registrerValidator->hasError('avatar') ? $registrerValidator->getError('avatar') : null; ?>
 	        				                                 </div>
 								                                   </div>
                                       </div>
@@ -233,24 +243,9 @@ if ($_POST) {
                             </div>
                       </div>
                 </div>
-                <!-- <div class="row">
-                      <div class="col-xs-12 col-sm-12 col-md-12 mis-redes-sociales">
-                          <p>También estamos en las redes!</p>
-                          <div class="mis-botones-redes">
-                            <a class="mi-boton-redsocial" href="#">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a class="mi-boton-redsocial" href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a class="mi-boton-redsocial" href="#">
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                          </div>
-                      </div>
-                </div> -->
+
                </div>
-		             <!-- <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer> -->
+		             <footer class="mi-footer"><h5 class="mi-texto-footer">© 2017-2019 Company, Inc.</h5></footer>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
@@ -262,5 +257,4 @@ if ($_POST) {
           </div>
       </div>
   </body>
-	<?php require_once('footer.php'); ?>
 </html>
