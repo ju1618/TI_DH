@@ -8,7 +8,7 @@ require_once "productos.php";
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div id="carouselExampleInterval" class="carousel slide carousel-product" data-ride="carousel">
-            <h3 class="title-product" id="cocina">Cocina</h3>
+            <h3 class="title-product text-left" id="cocina">Cocina</h3>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="10000">
                   <!-- <div class="row">
@@ -115,7 +115,7 @@ require_once "productos.php";
     <div class="row">
       <div class="col-sm-12">
         <div id="carouselExampleInterval2" class="carousel slide" data-ride="carousel">
-          <h3 class="title-product-2" id="oficina">Oficina</h3>
+          <h3 class="title-product-2 text-left" id="oficina">Oficina</h3>
           <div class="carousel-inner">
               <div class="carousel-item active" data-interval="10000">
                 <!-- <div class="row">

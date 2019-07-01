@@ -1,3 +1,8 @@
+<!-- PENDIENTES MAQUETADO
+corregir las imagenes en el responsive del carrousel top
+corregir el alto de las "card" y las alineaciones del boton
+agregar un poco del stilo del login y registrer al index -->
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 
@@ -9,10 +14,10 @@
   </head>
   <body>
 
-    <div class="main-container">
+    <div class="main-container-index">
 
       <?php
-       require_once("nav-bar.php");
+       require_once 'nav-bar.php';
       ?>
 
       <br><br><br><br>

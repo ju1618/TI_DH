@@ -19,6 +19,15 @@ ul {
   padding: 0px;
   list-style: none;
 }
+
+.main-container-index{
+  background-image: url("../images/colorclaro.jpg");
+  background-size:cover;
+}
+
+.carrousel-top{
+  max-height: 340px;
+}
 @media (max-width: 767px) {
   .carousel-item .logo-mkp{
     display: none;
