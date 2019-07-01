@@ -28,238 +28,7 @@ ul {
 .carrousel-top{
   max-height: 340px;
 }
-@media (max-width: 767px) {
-  .carousel-item .logo-mkp{
-    display: none;
-    background-image: url("../images/log.png");
-  }
-  .carousel-item img{
-    height: 50vw;
-    margin-top: 35px;
-  }
-  .main-content-product{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-around;
-    background-color: white;
-    width: 95vw;
-    margin: 20px 10px 10px 30px;
-  }
-  #content-product{
-    box-sizing: content-box;
-    background-color: rgba(191, 194, 188, 0.55);
-    width: 40vw;
-    border-radius: 10px;
-    padding: 1px;
-  }
-  #content-product img {
-    /* width:70px; */
-    height: 75px;
-    padding-top: 10px;
-    object-fit: contain;
-  }
-  #content-product h2{
-    object-fit: contain;
-    font-size: 15px;
-  }
-  #content-product span{
-    font-size: 10px;
-  }
-  .social-links {
-    display: none;
 
-  }
-/*
-  .main-nav-container img{
-    display: flex;
-    justify-content: flex-start;
-    height: 10vw;
-  }
-  .desplegable-nav {
-    width: 75vw;
-    border: 0px;
-    border-color: white;
-    position: absolute;
-    z-index: 5;
-    background-color: rgba(232, 47, 6, 0.81);
-  }
-
-  .desplegable-nav ul{
-    display: none;
-  }
-  .desplegable-nav:hover ul {
-    display: block;
-  }
-  .desplegable-nav li{
-    border: solid 1px rgb(57, 16, 2);
-    padding: 0;
-    margin: 0;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-  }
-  .main-nav li{
-    margin-bottom: 2px;
-    width: 100%;
-  } */
-  .main-content-product {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    margin:10px;
-    background-color: white;
-    width: 80vw;
-    padding: 10px;
-  }
-  #content-product{
-    background-color: rgba(191, 194, 188, 0.55);
-    width: 100vw;
-    border-radius: 10px;
-    margin:10px;
-  }
-  #content-product img {
-    width: 80px;
-    padding-top: 10px;
-  }
-}
-@media (min-width:768px) {
-/* .main-header{
-  display:inline-block;
-  background-color: rgb(217, 63, 14);
-  width: 100vw;
-}
-.main-nav{
-  float: left;
-}
-.main-nav ul {
-  list-style:none;
-  float:left;
-  border: 0px;
-  padding: 1%;
-  width:100vw;
-}
-.main-nav ul li {
-  float:left;
-  margin-right:20px;
-  margin-bottom:10px;
-  padding:1px;
-  border-radius: 15%;
-
-}
-.main-nav ul li a {
-  text-decoration: none;
-
-}
-
-.menu-img{
-   display: none;
-}
-.carousel-item {
-  height: 25vw;
-}
-#carouselExampleIndicators{
-  position: relative;
-  left: 10%;
-} */
-.main-content-product{
-  display: inline-flex;
-  flex-direction: row;
-  justify-content:space-around;
-  background-color: white;
-  width: 95vw;
-  padding: 10px;
-  margin: 50px 10px 10px 30px;
-}
-#content-product{
-  background-color: rgba(191, 194, 188, 0.55);
-  width: 30vw;
-  border-radius: 10px;
-}
-#content-product img {
-  width: 140px;
-  padding-top: 10px;
-}
-
-/* .content-footer{
-  box-sizing: border-box;
-  background-color: grey;
-  width: 100vw;
-  height: 50px;
-}
-#contact{
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-#contact li {
-  padding: 10px;
-}
-} */
-@media (min-width:1024px) {
-  .carousel-item .logo-mkp{
-    padding:30px 500px;
-  }
-  .carousel-item .main-carousel{
-    max-height: 500px;
-  }
-}
-header{
-  margin-bottom:10px;
-}
-.social-links {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  list-style: none;
-  border: solid 1px rgba(24, 97, 62, 0.75);
-  border-radius: 3px;
-  transform: translateY(-50%);
-}
-/* .social-links nav ul li{
-  list-style: none;
-} */
-.social-links img{
-  width: 2vw;
-}
-/* .up-link{
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.up-link img{
-  width: 5vw;
-} */
-.carousel-item .main-carousel img{
-  height: 30vw;
-}
-.main-content-product{
-  overflow: hidden;
-  display: inline-flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  justify-content: space-around;
-  background-color: white;
-  width: 95vw;
-  padding: 10px;
-  margin: 50px 10px 10px 30px;
-}
-#content-product{
-  background-color: rgba(191, 194, 188, 0.55);
-  width: 30vw;
-  border-radius: 10px;
-  margin: 5px;
-}
-#content-product img {
-  width: 140px;
-  padding-top: 10px;
-}
-
-}
 header{
 margin-bottom:10px;
 }
@@ -277,15 +46,7 @@ list-style: none;
 .social-links img{
 width: 2vw;
 }
-/* .up-link{
-position: fixed;
-left: 0;
-top: 50%;
-transform: translateY(-50%);
-}
-.up-link img{
-width: 5vw;
-} */
+
 .main-content-product{
 overflow: hidden;
 display: inline-flex;
@@ -357,3 +118,142 @@ padding-top: 10px;
 .carousel-item h1{
   font-family:  Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
 }
+
+/* ------inicio de los media querys------- */
+/* inicio de mquery 767 */
+@media (max-width: 767px) {
+  .carousel-item .logo-mkp{
+    display: none;
+    background-image: url("../images/log.png");
+  }
+  .carousel-item img{
+    height: 50vw;
+    margin-top: 35px;
+  }
+  .main-content-product{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    background-color: white;
+    width: 95vw;
+    margin: 20px 10px 10px 30px;
+  }
+  #content-product{
+    box-sizing: content-box;
+    background-color: rgba(191, 194, 188, 0.55);
+    width: 40vw;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  #content-product img {
+    /* width:70px; */
+    height: 75px;
+    padding-top: 10px;
+    object-fit: contain;
+  }
+  #content-product h2{
+    object-fit: contain;
+    font-size: 15px;
+  }
+  #content-product span{
+    font-size: 10px;
+  }
+  .social-links {
+    display: none;
+
+  }
+  .main-content-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin:10px;
+    background-color: white;
+    width: 80vw;
+    padding: 10px;
+  }
+  #content-product{
+    background-color: rgba(191, 194, 188, 0.55);
+    width: 100vw;
+    border-radius: 10px;
+    margin:10px;
+  }
+  #content-product img {
+    width: 80px;
+    padding-top: 10px;
+  }
+  .main-content-product{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: white;
+    width: 95vw;
+    padding: 10px;
+    margin: 50px 10px 10px 30px;
+  }
+  #content-product{
+    background-color: rgba(191, 194, 188, 0.55);
+    width: 30vw;
+    border-radius: 10px;
+  }
+  #content-product img {
+    width: 140px;
+    padding-top: 10px;
+  }
+}
+/* fin del mquery 767 */
+
+
+/* inicio del mquery 1024 */
+@media (min-width:1024px) {
+  .carousel-item .logo-mkp{
+    padding:30px 500px;
+  }
+  .carousel-item .main-carousel{
+    max-height: 500px;
+  }
+
+  header{
+    margin-bottom:10px;
+  }
+  .social-links {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    list-style: none;
+    border: solid 1px rgba(24, 97, 62, 0.75);
+    border-radius: 3px;
+    transform: translateY(-50%);
+  }
+  /* .social-links nav ul li{
+  list-style: none;
+} */
+  .social-links img{
+    width: 2vw;
+  }
+  .carousel-item .main-carousel img{
+    height: 30vw;
+  }
+  .main-content-product{
+    overflow: hidden;
+    display: inline-flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+    background-color: white;
+    width: 95vw;
+    padding: 10px;
+    margin: 50px 10px 10px 30px;
+  }
+  #content-product{
+    background-color: rgba(191, 194, 188, 0.55);
+    width: 30vw;
+    border-radius: 10px;
+    margin: 5px;
+  }
+  #content-product img {
+    width: 140px;
+    padding-top: 10px;
+  }
+
+}
+  /* fin del mquery 1024px */
