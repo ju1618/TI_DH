@@ -3,17 +3,6 @@
 require_once "productos.php";
 
  ?>
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/product-c.css">
-
-
-    <title></title>
-  </head>
   <body>
     <div class="container">
       <div class="row">
@@ -29,7 +18,7 @@ require_once "productos.php";
                     <?php endforeach; ?>
                     <div class="card-deck">
                         <div class="card" style="width: 18rem;">
-                          <img src=<?= $pdtos[0]['imagen'] ?> class="card-img-top" alt="...">
+                          <img src=<?= $pdtos[0]['imagen'] ?> class="card-img-top img-carrousel" alt="...">
                           <div class="card-body">
                             <h5 class="card-title"><?= $pdtos[0]['nombre'] ?></h5>
                             <a href="detalle-producto.php?id=0" id="details" class="btn btn-outline-success">Detalles</a>
@@ -64,9 +53,7 @@ require_once "productos.php";
                         </div>
 
                       </div>
-                    <!-- </div> -->
-                  <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                <!-- </div> -->
+
                 </div>
                 <div class="carousel-item" data-interval="2000">
                   <div class="card-deck product-X">
@@ -238,4 +225,3 @@ require_once "productos.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
-</html>

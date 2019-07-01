@@ -9,6 +9,7 @@ require_once 'classes/DBJson.php';
 require_once 'classes/Auth.php';
 
 
+<<<<<<< HEAD
 
 $DB = new DBJson('users.json');
 $Auth = new Auth($DB);
@@ -19,11 +20,19 @@ $Auth = new Auth($DB);
 if ( $Auth->isLogged() ) {
     var_dump('Entre a isloged');
     exit;
+=======
+	require_once 'data/db/conection.php';
+	// require_once 'data/db/migracion.php';
+
+	// Si está logueda la persona la redirijo al profile
+	if ( isLogged() ) {
+>>>>>>> 90239434c1b4b4e9e707ba9e2a26e3d9f22f1bb7
 		header('location: perfilusuario.php');
 		exit;
 	}
 var_dump('Segui mi camino. Voy a instanciar registrer');
 
+<<<<<<< HEAD
 
 
 $registrerValidator = new RegisterValidator;
@@ -53,9 +62,63 @@ if ($_POST) {
           // setcookie('userLogedEmail', $user->getEmail(), time() + 3000);
           var_dump('Voy a loguear al tipo');
 			    $Auth->login($user);
+=======
 
 
+	require_once 'data/db/save.php';
+
+
+//Paises del select
+ $countries = [
+ 		'ar' => 'Argentina',
+ 		'bo' => 'Bolivia',
+ 		'br' => 'Brasil',
+ 		'co' => 'Colombia',
+ 		'cl' => 'Chile',
+ 		'ec' => 'Ecuador',
+ 		'pa' => 'Paraguay',
+ 		'pe' => 'Perú',
+ 		'uy' => 'Uruguay',
+ 		've' => 'Venezuela',
+ 	];
+
+// Si entra por GET va a dar error, entonces creo la variable
+$errorsInRegister = [];
+// Voy a persitir lo siguiente
+$id='';
+$username = '';
+$name = '';
+$lastname = '';
+$email = '';
+$countryFromPost = '';
+
+
+
+
+//Si es post se seteó?
+if ($_POST) {
+      // Variables de persistencia , que reciben lo que viene de post
+      $username = trim($_POST['username']);
+      $name = trim($_POST['name']);
+      $lastname = trim($_POST['lastname']);
+      $email = trim($_POST['email']);
+      $countryFromPost = $_POST['country'];
+			$imgAvatar=$_POST['avatar'];
+
+      // funcion que nos retorna los errores que se hayan presentado
+      $errorsInRegister = registerValidate();
+>>>>>>> 90239434c1b4b4e9e707ba9e2a26e3d9f22f1bb7
+
+
+<<<<<<< HEAD
       }
+=======
+      			// // Guardo la imagen y obtengo el nombre aleatorio creado
+      			$imgName = saveImage();
+            // //
+      			// // // Creo en $_POST una posición "avatar" para guardar el nombre de la imagen
+      			$imgAvatar = $imgName;
+>>>>>>> 90239434c1b4b4e9e707ba9e2a26e3d9f22f1bb7
 
       		}
 
@@ -162,6 +225,10 @@ if ($_POST) {
                             </div>
                             <div class="mi-principal-form">
                                   <form role="form" class="" action="" method="post" enctype="multipart/form-data">
+
+
+																			<!-- <input type="hidden" name="id" value="<?php echo $oneUser['id'] ?>"> -->
+
                                       <!-- Agrupamientos de los inputs, usamos unas clases propias de bootstrap -->
                                       <div class="form-group">
                                             <input type="text" name="username" value="<?= $registrerValidator->getUsername(); ?>" placeholder="Ingresa tu usuario..." class="form-control <?= $registrerValidator->hasError('username') ? 'is-invalid' : null ?>" id="username-form">
