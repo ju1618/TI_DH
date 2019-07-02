@@ -239,6 +239,7 @@ function saveUser() {
 	//
 	// // 	// Retorno al usuario que acabo de guardar para poder tenerlo listo y loguearlo
 	// return $finalUser;
+	require_once 'data/db/migracion.php';
 
   $sql="INSERT INTO user values (default, :username, :name, :lastname, :email, :countryFromPost, :imgName, :pass)";
   $query=$db->prepare($sql);
