@@ -8,10 +8,9 @@
 
 	// Si está logueda la persona la redirijo al profile
 	if ( isLogged() ) {
-		header('location: perfilusuario.php');
+		header('location: perfilusuario2.php');
 		exit;
 	}
-
 
 
 	// require_once 'data/db/save.php';

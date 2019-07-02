@@ -157,14 +157,19 @@ require_once 'data/db/conection.php';
 
 	// Función traer todo del JSON
 	function getAllUsers() {
+		global $db;
 		// Obtengo el contenido del archivo JSON
-		$fileContent = file_get_contents(USERS_JSON_PATH);
+		// $fileContent = file_get_contents(USERS_JSON_PATH);
+		$mysql="SELECT * FROM user";
+		$queryU=$db->prepare($mysql);
+		$queryU->execute();
 
+		$allUsers=$queryU->fetchAll(PDO::FETCH_ASSOC);
 		// Decodifico el JSON a un array asociativo, importante el "true"
-		$allUsers = json_decode($fileContent, true);
+		// $allUsers = json_decode($fileContent, true);
 
 		// Retorno el array de usuarios
-		return $allUsers;
+		 return $allUsers;
 	}
 
 
@@ -212,7 +217,29 @@ function saveUser() {
   $imgAvatar=$_POST['avatar'];
   $pass=$_POST['password'];
 
-	// $sql="INSERT INTO user  values (default, '$username', '$name', '$lastname','$email', '$countryFromPost', '$imgAvatar', '$pass')";
+	// 	// Hasheo el password del usuario
+	$pass = password_hash(trim($_POST['password']), PASSWORD_DEFAULT);
+
+	// 	// Elimino de $_POST la posición "rePassword" ya que no me interesa guardar este dato en mi DB (Data Base)
+	unset($_POST['rePassword']);
+	// var_dump($_POST);
+
+	// // 	// En la variable $finalUser guardo el array de $_POST
+	$finalUser = $_POST;
+	//
+	// // 	// Obtengo todos los usuarios
+	$allUsers = getAllUsers();
+	//
+	// // 	// En la última posición del array de usuarios, inserto al usuario nuevo
+	$allUsers[] = $finalUser;
+	//
+	//
+	// // 	// Guardo todos los usuarios de vuelta en el JSON
+	// file_put_contents(USERS_JSON_PATH, json_encode($allUsers));
+	//
+	// // 	// Retorno al usuario que acabo de guardar para poder tenerlo listo y loguearlo
+	// return $finalUser;
+
   $sql="INSERT INTO user values (default, :username, :name, :lastname, :email, :countryFromPost, :imgName, :pass)";
   $query=$db->prepare($sql);
 	$query->bindValue(':username', $username);
@@ -224,6 +251,8 @@ function saveUser() {
   $query->bindValue(':pass', $pass);
 
 	$query->execute();
+
+	return $finalUser;
 }
 
 	// Función para loguear al usuario
